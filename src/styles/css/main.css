@@ -1,13 +1,13 @@
 @import 'normalize.css';
 @font-face {
     font-family: 'icomoon';
-    src: url('../../assets/fonts-icons/icomoon.eot');
+    src: url('../../assets/fonts-icons/icomoon.eot?mlpfdl');
     src:
-        url('../../assets/fonts-icons/icomoon.eot?#iefix')
+        url('../../assets/fonts-icons/icomoon.eot?mlpfdl#iefix')
             format('embedded-opentype'),
-        url('../../assets/fonts-icons/icomoon.ttf?ced3dg') format('truetype'),
-        url('../../assets/fonts-icons/icomoon.woff?ced3dg') format('woff'),
-        url('../../assets/fonts-icons/icomoon.svg#icomoon') format('svg');
+        url('../../assets/fonts-icons/icomoon.ttf?mlpfdl') format('truetype'),
+        url('../../assets/fonts-icons/icomoon.woff?mlpfdl') format('woff'),
+        url('../../assets/fonts-icons/icomoon.svg?mlpfdl#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -74,4 +74,24 @@
 
 .icon-footer-dropdown:before {
     content: '\e909';
+}
+
+.icon-cross:before {
+    content: '\ea0f';
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0.8rem 0.8rem 0.5rem;
+    margin-top: 1.7rem;
+    margin-left: 0rem;
+}
+.header__hamburger {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.header__nav {
+    display: none;
 } /*# sourceMappingURL=main.css.map */
