@@ -8,11 +8,21 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
     border: none;
 
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus-visible {
+        outline: 3px solid currentColor;
+        outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+        transform: none;
     }
 }

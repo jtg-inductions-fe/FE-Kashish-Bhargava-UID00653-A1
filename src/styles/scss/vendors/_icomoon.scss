@@ -1,21 +1,22 @@
 @font-face {
     font-family: 'icomoon';
-    src: url('fonts/icomoon.eot?ced3dg');
+    src: url('../../assets/fonts-icons/icomoon.eot?mlpfdl');
     src:
-        url('fonts/icomoon.eot?ced3dg#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?ced3dg') format('truetype'),
-        url('fonts/icomoon.woff?ced3dg') format('woff'),
-        url('fonts/icomoon.svg?ced3dg#icomoon') format('svg');
+        url('../../assets/fonts-icons/icomoon.eot?mlpfdl#iefix')
+            format('embedded-opentype'),
+        url('../../assets/fonts-icons/icomoon.ttf?mlpfdl') format('truetype'),
+        url('../../assets/fonts-icons/icomoon.woff?mlpfdl') format('woff'),
+        url('../../assets/fonts-icons/icomoon.svg?mlpfdl#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
 
-[class^='icon-'],
-[class*=' icon-'] {
+.ic [class^='icon-'],
+.ic [class*=' icon-'] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: never;
+    font-family: 'icomoon';
+    //   speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -66,4 +67,7 @@
 }
 .icon-footer-dropdown:before {
     content: '\e909';
+}
+.icon-cross:before {
+    content: '\ea0f';
 }

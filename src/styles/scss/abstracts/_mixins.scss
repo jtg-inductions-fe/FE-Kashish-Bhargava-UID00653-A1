@@ -1,5 +1,9 @@
-@mixin flex-centre {
+@mixin flex-centre($direction: row, $gap: null) {
     display: flex;
-    justify-content: centre;
-    align-items: centre;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+    @if $gap != null {
+        gap: $gap;
+    }
 }

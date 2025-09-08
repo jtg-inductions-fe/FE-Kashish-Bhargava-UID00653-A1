@@ -1,6 +1,9 @@
-//base styles
++// base styles
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 html {
-    font-size: 16px;
+    font-size: 100%;
     scroll-behavior: smooth;
 }
 
@@ -9,14 +12,23 @@ body {
     line-height: 1.6;
     background-color: #fff;
     color: $primary-text-color;
+    min-height: 100dvh;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
 }
 
 img {
     max-width: 100%;
     display: block;
+    height: auto;
 }

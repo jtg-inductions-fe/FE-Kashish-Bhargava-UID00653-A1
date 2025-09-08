@@ -3,13 +3,25 @@ $primary-color: #5d50c6;
 $secondary-color: #f85e9f;
 $primary-background-color: #ff5722;
 $secondary-background-color: #facd49;
-$primary-text-color: #191825bf;
-$secondary-text-color: #191825;
+$primary-text-color: #3a2d2f;
+$secondary-text-color: #91888a;
 
 //font-family
 $font-primary: 'Roboto', sans-serif;
 
 //8-pt system (spacing)
+// As a map for scale-based usage
+$space: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 0.75rem,
+    4: 1rem,
+    5: 1.5rem,
+    6: 2rem,
+    7: 3rem,
+    8: 4rem,
+);
 $space-0: 0;
 $space-1: 0.25rem;
 $space-2: 0.5rem;
