@@ -156,7 +156,7 @@ a {
 // Addresses font sizes and margins set differently in IE6/7
 // Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
 
-@if $normalize_headings {
+@if $normalize_headings ==true {
     h1 {
         font-size: $h1_font_size;
         margin: $h1_margin;
