@@ -1,5 +1,8 @@
-+// base styles
-*, *::before, *::after {
+@use './abstracts/variables';
+// base styles
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 html {
@@ -8,7 +11,7 @@ html {
 }
 
 body {
-    font-family: $font-primary;
+    font-family: variables.$font-primary;
     line-height: 1.6;
     background-color: #fff;
     color: $primary-text-color;
