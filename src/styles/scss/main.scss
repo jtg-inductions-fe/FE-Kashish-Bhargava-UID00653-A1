@@ -1,6 +1,7 @@
 // TODO: Add styles as per the requirement
-@import 'normalize.css/normalize.css';
+
 @use 'abstracts/variables';
+@use 'base/normalize';
 @use 'abstracts/mixins';
 @use 'abstracts/functions';
 @use 'abstracts/placeholders';
