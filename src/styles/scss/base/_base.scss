@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 // base styles
+@use '../abstracts/variables';
 *,
 *::before,
 *::after {
