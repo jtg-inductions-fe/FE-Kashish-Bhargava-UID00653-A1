@@ -509,7 +509,7 @@ img {
     color: #fff;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (width >= 1024px) {
     .header {
         display: flex;
         justify-content: space-between;
@@ -573,6 +573,78 @@ img {
         transition: transform 0.3s ease-in-out;
     }
     .sidebar__buttons {
+        display: none;
+    }
+}
+@media (width >= 1440px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 3.9rem;
+        padding-right: 6.2rem;
+        padding-bottom: 1rem;
+        padding-left: 9.4rem;
+    }
+    .header__logo {
+        order: 1;
+        margin: 0;
+        padding: 0;
+    }
+    .header__nav {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        margin-right: 3rem;
+        height: auto;
+    }
+    .header__nav .header__list {
+        list-style: none;
+        display: flex;
+        gap: 4rem;
+    }
+    .header__nav .header__list li a {
+        text-decoration: none;
+        color: #938789;
+        font-family: 'Roboto', 'sans-serif';
+        transition: color 0.2s;
+        font-size: 0.9rem;
+    }
+    .header__nav .header__list li a:hover {
+        color: #3a2d2f;
+    }
+    .header__buttons {
+        order: 3;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        flex-direction: row;
+        width: auto;
+        max-width: 400px;
+        padding: 0;
+        margin: 0;
+    }
+    .header__buttons .btn {
+        border: none;
+        padding: 1.1rem 2rem 1.1rem 2.2rem;
+        border-radius: 999px;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: 'Roboto', 'sans-serif';
+    }
+    .header__buttons .btn--login {
+        background-color: #fff;
+        color: #3a2d2f;
+        padding: 1.1rem 1.3rem 1.1rem 2.2rem;
+    }
+    .header__buttons .btn--signup {
+        background-color: #5d50c6;
+        color: #fff;
+    }
+    .header__hamburger,
+    .sidebar {
         display: none;
     }
 } /*# sourceMappingURL=main.css.map */
