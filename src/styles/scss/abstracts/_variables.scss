@@ -1,15 +1,16 @@
 //Colors
+// @use '../base/typography';
 $default-background-color: #fff !default;
 $primary-color: #5d50c6 !default;
 $secondary-color: #f85e9f !default;
 $primary-background-color: #ff5722 !default;
 $secondary-background-color: #facd49 !default;
 $primary-text-color: #3a2d2f !default;
-$secondary-text-color: #5c595a;
+$secondary-text-color: #5c595a !default;
 $sidebar-background-color: #fcb8d0 !default;
 
 //font-family
-$font-primary: 'Roboto', 'sans-serif';
+$font-primary: 'Roboto', sans-serif;
 
 //8-pt system (spacing)
 // As a map for scale-based usage

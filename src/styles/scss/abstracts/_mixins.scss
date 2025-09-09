@@ -9,6 +9,11 @@
     }
 }
 
+//Alias for consistency with CSS spelling
+@mixin flex-center($direction: row, $gap: null) {
+    @include flex-centre($direction, $gap);
+}
+
 @mixin button($fontsize, $paddings, $backgroundcolor, $textcolor) {
     border: none;
     text-align: center;
