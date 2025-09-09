@@ -26,7 +26,7 @@ a {
         text-decoration: underline;
     }
     &:focus-visible {
-        outline: 2px solid;
+        outline: 2px solid variables.$primary-color;
         outline-offset: 2px;
     }
 }
