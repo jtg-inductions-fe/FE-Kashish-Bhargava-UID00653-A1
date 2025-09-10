@@ -7,7 +7,8 @@
         <!-- <link rel="stylesheet" href="./src/styles/scss/main.scss" /> -->
     </head>
     <body class="preload">
-        <header class="header">
+        <div class="wrapper1">
+          <header class="header">
             <a class="header__logo" href="#">
                 <img
                     src="src/assets/images/navbar/travlog-logo.png"
@@ -47,9 +48,9 @@
             >
                 <i class="icon-navbar-hamburger"></i>
             </button>
-        </header>
-        <!-- Sidebar (Mobile/Tablet) -->
-        <aside class="sidebar" id="sidebar" aria-hidden="true">
+          </header>
+          <!-- Sidebar (Mobile/Tablet) -->
+          <aside class="sidebar" id="sidebar" aria-hidden="true">
             <button
                 class="sidebar__close"
                 id="closeSidebar"
@@ -77,8 +78,76 @@
                 <button type="button" class="btn btn--login">Log In</button>
                 <button type="button" class="btn btn--signup">Sign Up</button>
             </div>
-        </aside>
-
+          </aside>
+            <section class="hero">
+                <!-- <div class="container"> -->
+                <div class="hero__image">
+                    <img
+                        src="src/assets/images/hero-section/hero-image.png"
+                        alt="hero-image"
+                    />
+                </div>
+                <div class="hero__content">
+                    <button class="btn btn--explore" aria-label="Explore Now">
+                        Explore the world!<i class="icon-hero-explore"></i>
+                    </button>
+                    <h1 class="hero__title">
+                        Travel <span class="pink">top destination</span> of the
+                        world
+                    </h1>
+                    <p class="hero__subtitle">
+                        We always make our customer happy by providing as many
+                        choices as possible
+                    </p>
+                    <button
+                        class="btn btn--getstarted"
+                        aria-label="Get Started"
+                    >
+                        Get Started
+                    </button>
+                    <button class="btn btn--watchdemo" aria-label="Watch Demo">
+                        <span class="hero__playbutton"
+                            ><img
+                                src="src/assets/images/hero-section/hero-play-circle.5 1.svg"
+                                alt="Play button" /></span
+                        >Watch Demo
+                    </button>
+                </div>
+                <div class="hero__partners">
+                    <div class="hero__list">
+                        <img
+                            src="src/assets/images/hero-section/hero-tripadvisor-logo.png"
+                            alt="tripadvisor-logo"
+                        />
+                    </div>
+                    <div class="hero__list">
+                        <img
+                            src="src/assets/images/hero-section/hero-Expedia-logo.png"
+                            alt="expedia-logo"
+                        />
+                    </div>
+                    <div class="hero__list">
+                        <img
+                            src="src/assets/images/hero-section/hero-booking-logo.png"
+                            alt="booking.com-logo"
+                        />
+                    </div>
+                    <div class="hero__list">
+                        <img
+                            src="src/assets/images/hero-section/hero-airbnb-logo.png"
+                            alt="airbnb-logo"
+                        />
+                    </div>
+                    <div class="hero__list">
+                        <img
+                            src="src/assets/images/hero-section/hero-orbitz-logo.png"
+                            alt="orbitz-logo"
+                        />
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+        </div>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
