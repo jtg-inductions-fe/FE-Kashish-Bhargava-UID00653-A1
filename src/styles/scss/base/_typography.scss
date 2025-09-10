@@ -1,4 +1,5 @@
-@use '../abstracts/variables';
+@use '../abstracts' as *;
+
 @font-face {
     font-family: 'Roboto';
     src:
