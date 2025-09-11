@@ -6,6 +6,8 @@
 .hero {
     max-width: 430px;
     width: 100%;
+    // width: 50%;
+    // margin: 0 auto;
     padding-top: 3.2rem;
     &__image {
         width: 26.5rem;
@@ -43,5 +45,22 @@
         .icon-hero-explore {
             font-size: 1.6rem;
         }
+    }
+    &__title {
+        text-align: center;
+        margin-top: 1.3rem;
+        font-size: 2.6rem;
+        padding: 0rem 0.9rem 0rem 0.9rem;
+        line-height: 3rem;
+        .pink {
+            color: variables.$secondary-color;
+        }
+    }
+    &__subtitle {
+        text-align: center;
+        padding: 0rem 0.8rem 0rem 0.9rem;
+        color: variables.$secondary-text-color;
+        margin-top: 0;
+        line-height: 2rem;
     }
 }
