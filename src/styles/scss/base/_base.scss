@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+// base styles
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    font-family: variables.$font-primary;
+    line-height: 1.6;
+    background-color: variables.$default-background-color;
+    color: variables.$primary-text-color;
+    min-height: 100dvh;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus-visible {
+        outline: 2px solid variables.$primary-color;
+        outline-offset: 2px;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}

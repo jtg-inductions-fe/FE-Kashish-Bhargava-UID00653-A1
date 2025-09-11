@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-family: variables.$font-primary;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    border: none;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus-visible {
+        outline: 3px solid;
+        outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+        transform: none;
+    }
+    &:disabled,
+    &[aria-disabled='true'] {
+        cursor: not-allowed;
+        opacity: 0.6;
+        pointer-events: none;
+        box-shadow: none;
+        transform: none;
+    }
+}
