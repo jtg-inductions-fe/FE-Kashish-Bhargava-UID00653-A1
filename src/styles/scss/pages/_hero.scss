@@ -86,13 +86,21 @@
             $backgroundcolor: transparent,
             $textcolor: variables.$primary-text-color
         );
-
-        // img{
-        //     padding-left: 6.7rem;
-        // }
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.4rem;
+    }
+    &__partners {
+        margin-top: 4rem;
+        margin-left: 0.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    &__list {
+        width: 7rem;
     }
 }
