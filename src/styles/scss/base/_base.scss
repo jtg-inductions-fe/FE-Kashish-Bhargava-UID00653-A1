@@ -23,6 +23,7 @@ body {
     background-color: variables.$default-background-color;
     color: variables.$primary-text-color;
     min-height: 100svh;
+    min-height: 100dvh;
     margin: 0;
 }
 
@@ -41,5 +42,5 @@ a {
 img {
     max-width: 100%;
     display: block;
-    height: auto; 
+    height: auto;
 }

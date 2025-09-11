@@ -22,7 +22,7 @@
     }
 
     &:focus-visible {
-        outline: 3px solid;
+        outline: 3px solid variables.$primary-color;
         outline-offset: 2px;
     }
 

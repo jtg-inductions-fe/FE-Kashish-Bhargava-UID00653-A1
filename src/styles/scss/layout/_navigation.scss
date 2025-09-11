@@ -48,7 +48,6 @@
     align-items: center;
     padding: 2rem 1rem;
     opacity: 0;
-    // transition: opacity 0.3s ease-in-out;
     visibility: hidden;
     pointer-events: none;
     transition:
@@ -58,7 +57,6 @@
     z-index: 1000;
 
     &.active {
-        // opacity: 1;
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -239,6 +237,10 @@
 
                 &:hover {
                     color: variables.$primary-text-color;
+                }
+                &:focus-visible {
+                    outline: 2px solid variables.$primary-text-color;
+                    outline-offset: 2px;
                 }
             }
         }
