@@ -58,9 +58,41 @@
     }
     &__subtitle {
         text-align: center;
-        padding: 0rem 0.8rem 0rem 0.9rem;
+        padding: 0rem 1.1rem 0rem 1rem;
         color: variables.$secondary-text-color;
-        margin-top: 0;
-        line-height: 2rem;
+        margin-top: -0.6rem;
+        line-height: 1.9rem;
+        font-size: 1rem;
+    }
+    .btn--getstarted {
+        margin-top: 0.7rem;
+        width: 25rem;
+        height: 4.1rem;
+        @include mixins.button(
+            $fontsize: 0.9rem,
+            $paddings: 0.6rem 1rem 0.8rem 1.2rem,
+            $backgroundcolor: variables.$primary-color,
+            $textcolor: variables.$default-background-color
+        );
+    }
+
+    .btn--watchdemo {
+        margin-top: 1.3rem;
+        width: 25rem;
+        height: 4.4rem;
+        @include mixins.button(
+            $fontsize: 0.9rem,
+            $paddings: 2.1rem 0.5rem 2rem 0.5rem,
+            $backgroundcolor: transparent,
+            $textcolor: variables.$primary-text-color
+        );
+
+        // img{
+        //     padding-left: 6.7rem;
+        // }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
     }
 }
