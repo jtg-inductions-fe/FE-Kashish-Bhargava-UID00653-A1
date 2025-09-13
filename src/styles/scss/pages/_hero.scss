@@ -126,7 +126,7 @@
 }
 
 //Tablet view
-@media (min-width: 1024px) {
+@media (min-width: variables.$bp-tablet) {
     .hero {
         max-width: 1024px;
         &__image {
@@ -208,7 +208,7 @@
 }
 
 //Desktop view
-@media (min-width: 1440px) {
+@media (min-width: variables.$bp-desktop) {
     .hero {
         max-width: 1440px;
         display: flex;

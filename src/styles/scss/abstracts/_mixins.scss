@@ -25,6 +25,14 @@
     font-weight: 700;
     background-color: $backgroundcolor;
     color: $textcolor;
+    &:focus-visible {
+        outline: 2px solid variables.$primary-color;
+        outline-offset: 2px;
+    }
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
 }
 
 @mixin flex(

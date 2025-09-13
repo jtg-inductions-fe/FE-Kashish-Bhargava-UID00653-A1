@@ -16,7 +16,11 @@
     &::before {
         content: '';
         position: absolute;
-        background: radial-gradient(circle, #ffd9cd 30%, white 70%);
+        background: radial-gradient(
+            circle,
+            variables.$primary-gradient-color 30%,
+            variables.$default-background-color 70%
+        );
         border-radius: 50%;
         width: 80vw;
         height: 80vw;
@@ -66,6 +70,10 @@
         width: auto; //button width=icon size
         height: auto; //button height=icon size
         padding: 0;
+        &:focus-visible {
+            outline: 3px solid variables.$primary-color;
+            outline-offset: 2px;
+        }
     }
 }
 
