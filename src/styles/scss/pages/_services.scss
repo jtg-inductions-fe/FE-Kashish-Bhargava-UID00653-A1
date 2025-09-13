@@ -1,0 +1,66 @@
+@use '../abstracts/variables';
+//Services section
+.services {
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2.4rem;
+
+    &__title {
+        letter-spacing: 3.6px;
+        color: variables.$secondary-color;
+    }
+    &__heading {
+        font-size: 2.1rem;
+        margin-top: -0.7rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        line-height: 2.7rem;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    &__card {
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: variables.$secondary-text-color;
+        border-radius: 2rem;
+        margin-top: -0.3rem;
+        width: 24.9rem;
+        height: 17.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        & > div {
+            padding-top: 1.7rem;
+            .img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        & > h3 {
+            font-size: 1.55rem;
+            line-height: 1rem;
+            margin-top: 2rem;
+        }
+
+        & > p {
+            font-size: 1.2rem;
+            padding: 0.3rem 1.8rem;
+            margin-top: 0.1rem;
+            line-height: 1.9rem;
+        }
+    }
+}
