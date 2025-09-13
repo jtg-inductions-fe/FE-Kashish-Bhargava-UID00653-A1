@@ -107,3 +107,66 @@
         }
     }
 }
+
+//Desktop view
+@media (min-width: 1440px) {
+    .services {
+        max-width: 1440px;
+        flex-direction: row;
+        margin-top: -4.6rem;
+        &__content {
+            text-align: left;
+        }
+        &__title {
+            margin-left: 8.1rem;
+            margin-top: 3.6rem;
+        }
+        &__heading {
+            margin-left: 8.1rem;
+            line-height: 3.4rem;
+            word-spacing: 1rem;
+        }
+        &__cards {
+            margin-right: 7.4rem;
+
+            & > :last-child {
+                display: none;
+            }
+
+            & > :nth-child(2) {
+                .services__image {
+                    margin-top: -3.5rem;
+                }
+
+                .services__cardtitle {
+                    margin-top: -0.6rem;
+                }
+
+                .services__cardsubtitle {
+                    margin-top: -10rem;
+                }
+            }
+        }
+        &__card {
+            margin-top: -0.7rem;
+            width: 24rem;
+            height: 27.7rem;
+            & > div {
+                padding-top: 3.2rem;
+                margin-top: -1.5rem;
+            }
+
+            & > h3 {
+                font-size: 1.76rem;
+                margin-top: 1.6rem;
+            }
+
+            & > p {
+                font-size: 1.2rem;
+                padding-top: 5.9rem;
+                margin-top: -8rem;
+                padding-bottom: 2.1rem;
+            }
+        }
+    }
+}
