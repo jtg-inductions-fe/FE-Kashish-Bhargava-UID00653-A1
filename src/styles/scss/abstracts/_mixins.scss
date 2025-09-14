@@ -29,7 +29,8 @@
         outline: 2px solid variables.$primary-color;
         outline-offset: 2px;
     }
-    &:disabled {
+    &:disabled,
+    &[aria-disabled='true'] {
         opacity: 0.6;
         cursor: not-allowed;
     }

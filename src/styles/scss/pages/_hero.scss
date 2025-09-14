@@ -132,6 +132,9 @@
         &__image {
             width: 155rem;
             height: 65rem;
+            max-width: 100%;
+            width: 100%;
+
             padding-left: 7.8rem;
             margin-top: 1.7rem;
         }
@@ -141,10 +144,10 @@
         .btn--explore {
             padding-bottom: 2.6rem;
         }
-        .exploretext {
+        .btn--explore .exploretext {
             font-size: 0.9rem;
         }
-        .icon-hero-explore {
+        .btn--explore .icon-hero-explore {
             padding-bottom: 1rem;
             padding-top: 0.9rem;
         }
