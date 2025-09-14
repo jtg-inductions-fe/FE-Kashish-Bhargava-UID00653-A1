@@ -232,6 +232,63 @@
                 </section>
             </main>
         </div>
+        <section class="travelpoint">
+            <div class="travelpoint__image">
+                <picture>
+                    <source
+                        media="(min-width: 1440px)"
+                        srcset="
+                            src/assets/images/travelpoint/travelpoint-image-desktop.png
+                        "
+                    />
+                    <source
+                        media="(min-width: 1024px)"
+                        srcset="
+                            src/assets/images/travelpoint/travelpoint-image-tablet.png
+                        "
+                    />
+                    <source
+                        media="(min-width: 430px)"
+                        srcset="
+                            src/assets/images/travelpoint/travelpoint-image-mobile.png
+                        "
+                    />
+                    <img
+                        src="src/assets/images/travelpoint/travelpoint-image-mobile.png"
+                        alt="Traveller"
+                    />
+                </picture>
+            </div>
+            <div class="travelpoint__content">
+                <h4 class="travelpoint__title">TRAVEL POINT</h4>
+                <h1 class="travelpoint__heading">
+                    We helping you find your dream location
+                </h1>
+                <p class="travelpoint__para">
+                    Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature
+                    from 45 BC.
+                </p>
+                <div class="travelpoint__cards">
+                    <div class="travelpoint__card">
+                        <h2 class="travelpoint__stats">500+</h2>
+                        <p class="travelpoint__service">Holiday Package</p>
+                    </div>
+                    <div class="travelpoint__card">
+                        <h2 class="travelpoint__stats">100</h2>
+                        <p class="travelpoint__service">Luxury Hotel</p>
+                    </div>
+                    <div class="travelpoint__card">
+                        <h2 class="travelpoint__stats">7</h2>
+                        <p class="travelpoint__service">Premium Airlines</p>
+                    </div>
+                    <div class="travelpoint__card">
+                        <h2 class="travelpoint__stats">2k+</h2>
+                        <p class="travelpoint__service">Happy Customer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
