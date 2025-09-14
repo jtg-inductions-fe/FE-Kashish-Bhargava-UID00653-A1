@@ -66,4 +66,61 @@
         padding-top: 0;
         margin-top: 0;
     }
+    //tablet view
+    @media (min-width: 1024px) {
+        max-width: 1024px;
+        &__image {
+            margin-top: 8rem;
+            margin-left: 6rem;
+        }
+
+        &__content {
+            margin-top: 1.6rem;
+        }
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__heading {
+            font-size: 2.6rem;
+            margin-top: -1rem;
+            margin-right: 1rem;
+            margin-left: 0.7rem;
+        }
+
+        &__para {
+            font-size: 1.2rem;
+            margin-left: 6rem;
+            margin-right: 6.4rem;
+        }
+        &__cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 1rem;
+            margin-top: 1.7rem;
+            margin-right: 6.2rem;
+            margin-left: 5.7rem;
+        }
+        &__service {
+            margin-top: 0.4rem;
+        }
+    }
+}
+
+//Desktop view
+@media (min-width: 1440px) {
+    .travelpoint {
+        max-width: 1440px;
+        &__image {
+            position: relative;
+            margin-top: 7.4rem;
+            margin-left: 0;
+        }
+        &__content {
+            margin-left: 33rem;
+            margin-top: -44.1rem;
+        }
+        &__heading {
+            margin-left: 8rem;
+        }
+    }
 }
