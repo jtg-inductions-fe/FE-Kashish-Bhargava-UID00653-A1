@@ -92,6 +92,8 @@
         $gap: 0
     );
     padding: 2rem 1rem;
+    // opacity: 0;
+    // transition: opacity 0.3s ease-in-out;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -104,6 +106,7 @@
     z-index: 1000;
 
     &.active {
+        // opacity: 1;
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
