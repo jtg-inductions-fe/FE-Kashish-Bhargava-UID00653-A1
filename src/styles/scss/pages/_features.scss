@@ -5,4 +5,78 @@
     max-width: 430px;
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5.6rem;
+    &__content {
+        margin-top: 6.7rem;
+    }
+    &__title {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.2rem;
+        color: variables.$secondary-color;
+    }
+    &__heading {
+        margin-top: 0rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+    &__para {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: variables.$secondary-text-color;
+    }
+    &__cards {
+        // margin-top: -0.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+    &__card {
+        border-radius: 2rem;
+        width: 21rem;
+        height: 18.1rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 7px 2px variables.$cards-shadow-color;
+        &:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    }
+    &__icon {
+        margin-top: 2.1rem;
+        margin-left: 2.1rem;
+    }
+    &__description {
+        margin-left: 2.2rem;
+        margin-top: -0.9rem;
+    }
+    &__subheading {
+        margin-top: 2.8rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        font-weight: 700;
+    }
+    &__subpara {
+        margin-top: -2.7rem;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        margin-right: 3.5rem;
+        color: variables.$secondary-text-color;
+        word-spacing: 0.2rem;
+    }
 }
