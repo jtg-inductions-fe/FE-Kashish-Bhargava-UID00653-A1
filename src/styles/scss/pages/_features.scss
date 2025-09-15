@@ -11,7 +11,7 @@
     align-items: center;
     margin-top: 5.6rem;
     &__content {
-        margin-top: 6.7rem;
+        margin-top: 5.3rem;
     }
     &__title {
         text-align: center;
@@ -21,13 +21,14 @@
         color: variables.$secondary-color;
     }
     &__heading {
-        margin-top: 0rem;
+        margin-top: -0.2rem;
         text-align: center;
         font-weight: 700;
         font-size: 2rem;
         line-height: 2.4rem;
     }
     &__para {
+        margin-top: 2rem;
         margin-left: 4rem;
         margin-right: 4rem;
         text-align: center;
@@ -37,7 +38,6 @@
         color: variables.$secondary-text-color;
     }
     &__cards {
-        // margin-top: -0.6rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -58,8 +58,8 @@
         }
     }
     &__icon {
-        margin-top: 2.1rem;
-        margin-left: 2.1rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
     }
     &__description {
         margin-left: 2.2rem;
@@ -88,7 +88,7 @@
         margin-top: 7.9rem;
 
         &__content {
-            margin-top: 4.4rem;
+            margin-top: 2.5rem;
         }
         &__title {
             font-size: 1.43rem;
@@ -101,7 +101,7 @@
             line-height: 3rem;
         }
         &__para {
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             font-size: 1.125rem;
             line-height: 1.8rem;
             margin-left: 7.1rem;
@@ -130,15 +130,27 @@
     }
 }
 
+//Desktop view
 @media (min-width: 1440px) {
     .features {
         max-width: 1440px;
         flex-direction: row-reverse;
+        gap: 4rem;
+        &__image {
+            position: inherit;
+            margin-top: 0rem;
+            width: 85rem;
+            height: 90rem;
+            margin-right: 0em;
+        }
         &__content {
-            margin-top: -56.4rem;
+            margin-top: -44.2rem;
+            margin-right: 0;
+            padding-right: 0;
         }
 
         &__title {
+            margin-top: 2.3rem;
             text-align: left;
             margin-left: 9rem;
         }
@@ -151,12 +163,13 @@
             font-size: 1.125rem;
             text-align: left;
             margin-left: 8.9rem;
-            margin-right: 50.35rem;
+            margin-right: 2.5rem;
+            padding-right: 2.11rem;
             line-height: 1.8rem;
         }
         &__cards {
-            margin-top: 4.2rem;
-            margin-left: -37.5rem;
+            margin-top: 4.3rem;
+            margin-left: 9rem;
         }
         &__card {
             width: 35rem;
