@@ -2,6 +2,7 @@
 
 //Mobile view
 .travelpoint {
+    z-index: 1;
     max-width: 430px;
     width: 100%;
     margin: 0 auto;
@@ -116,7 +117,6 @@
     .travelpoint {
         max-width: 1440px;
         &__image {
-            position: relative;
             margin-top: 7.4rem;
             margin-left: 0;
         }
