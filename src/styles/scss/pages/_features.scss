@@ -1,0 +1,8 @@
+@use '../abstracts/variables';
+//Mobile view
+.features {
+    z-index: 1;
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+}
