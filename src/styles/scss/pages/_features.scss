@@ -129,3 +129,43 @@
         }
     }
 }
+
+@media (min-width: 1440px) {
+    .features {
+        max-width: 1440px;
+        flex-direction: row-reverse;
+        &__content {
+            margin-top: -56.4rem;
+        }
+
+        &__title {
+            text-align: left;
+            margin-left: 9rem;
+        }
+        &__heading {
+            text-align: left;
+            margin-left: 9rem;
+            word-spacing: 0.8rem;
+        }
+        &__para {
+            font-size: 1.125rem;
+            text-align: left;
+            margin-left: 8.9rem;
+            margin-right: 50.35rem;
+            line-height: 1.8rem;
+        }
+        &__cards {
+            margin-top: 4.2rem;
+            margin-left: -37.5rem;
+        }
+        &__card {
+            width: 35rem;
+        }
+        &__subheading {
+            margin-left: -0.1rem;
+        }
+        &__subpara {
+            margin-left: -0.6rem;
+        }
+    }
+}
