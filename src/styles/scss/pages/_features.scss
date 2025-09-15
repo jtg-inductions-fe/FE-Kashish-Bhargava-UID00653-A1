@@ -80,3 +80,52 @@
         word-spacing: 0.2rem;
     }
 }
+
+//Tablet view
+@media (min-width: 1024px) {
+    .features {
+        max-width: 1024px;
+        margin-top: 7.9rem;
+
+        &__content {
+            margin-top: 4.4rem;
+        }
+        &__title {
+            font-size: 1.43rem;
+            line-height: 1.72rem;
+            letter-spacing: 0.28rem;
+        }
+        &__heading {
+            margin-top: -0.7rem;
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+        &__para {
+            margin-top: 1rem;
+            font-size: 1.125rem;
+            line-height: 1.8rem;
+            margin-left: 7.1rem;
+            margin-right: 7.1rem;
+            font-weight: 400;
+        }
+        &__cards {
+            margin-top: 3.8rem;
+            gap: 0rem;
+        }
+        &__card {
+            flex-direction: row;
+            width: 52rem;
+            height: 10.2rem;
+        }
+        &__icon {
+            margin-top: 1.9rem;
+        }
+        &__subheading {
+            margin-top: 4rem;
+            margin-left: -0.4rem;
+        }
+        &__subpara {
+            margin-left: -0.4rem;
+        }
+    }
+}
