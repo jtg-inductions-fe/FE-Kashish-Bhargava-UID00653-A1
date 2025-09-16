@@ -1,5 +1,8 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
+.no-scroll {
+    overflow: hidden;
+}
 .header {
     display: flex;
     justify-content: space-between;
