@@ -15,6 +15,12 @@ const toggle = () => {
 
 if (hamburger) hamburger.addEventListener('click', toggle);
 if (closeSidebar) closeSidebar.addEventListener('click', toggle);
+// Close on item selection
+document
+    .querySelectorAll('.sidebar__list a')
+    .forEach((a) =>
+        a.addEventListener('click', () => sidebar?.classList.remove('active')),
+    );
 // allow ESC to close
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && sidebar?.classList.contains('active')) toggle();
