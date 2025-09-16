@@ -1,4 +1,3 @@
-import '../styles/scss/main.scss';
 //sidebar functionality
 const sidebar = document.getElementById('sidebar');
 const hamburger = document.querySelector('.header__hamburger');
