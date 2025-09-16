@@ -26,3 +26,16 @@
     background-color: $backgroundcolor;
     color: $textcolor;
 }
+
+@mixin flex(
+    $direction: row,
+    $justify: flex-start,
+    $alignment: stretch,
+    $gap: 0
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignment;
+    gap: $gap;
+}
