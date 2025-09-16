@@ -241,7 +241,6 @@
     }
     .sidebar {
         transform: translateX(-100%);
-        //  transition: transform var(--trans-dur) 0.3s ease;
         &.active {
             transform: translateX(0);
         }
