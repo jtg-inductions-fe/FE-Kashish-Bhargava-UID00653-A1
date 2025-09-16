@@ -22,10 +22,12 @@
     }
     &__content {
         margin-top: -2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include mixins.flex(
+            $direction: column,
+            $justify: center,
+            $alignment: center,
+            $gap: 0
+        );
     }
     .btn--explore {
         z-index: 6;
@@ -85,18 +87,22 @@
             $backgroundcolor: transparent,
             $textcolor: variables.$primary-text-color
         );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.4rem;
+        @include mixins.flex(
+            $direction: row,
+            $justify: center,
+            $alignment: center,
+            $gap: 0.4rem
+        );
     }
     &__partners {
         margin-top: 4.1rem;
         margin-left: -1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
+        @include mixins.flex(
+            $direction: row,
+            $justify: center,
+            $alignment: center,
+            $gap: 2rem
+        );
         flex-wrap: wrap;
         row-gap: 1.9rem;
     }
@@ -214,11 +220,13 @@
 @media (min-width: variables.$bp-desktop) {
     .hero {
         max-width: 1440px;
-        display: flex;
-        flex-direction: row;
+        @include mixins.flex(
+            $direction: row,
+            $justify: center,
+            $alignment: center,
+            $gap: 0
+        );
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
         &__content {
             order: 1;
             margin-top: 5.5rem;
@@ -272,10 +280,12 @@
             order: 3;
             margin-top: -23.5rem;
             margin-left: 7rem;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 4.5rem;
+            @include mixins.flex(
+                $direction: row,
+                $justify: flex-start,
+                $alignment: center,
+                $gap: 4.5rem
+            );
             margin-right: 3.9rem;
         }
         &__list1 {
