@@ -150,7 +150,7 @@
         @include mixins.flex(
             $direction: row,
             $justify: space-between,
-            $alignment: centre,
+            $alignment: center,
             $gap: 0
         );
         margin: 0;
