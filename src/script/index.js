@@ -18,9 +18,7 @@ if (closeSidebar) closeSidebar.addEventListener('click', toggle);
 // Close on item selection
 document
     .querySelectorAll('.sidebar__list a')
-    .forEach((a) =>
-        a.addEventListener('click', () => sidebar?.classList.remove('active')),
-    );
+    .forEach((a) => a.addEventListener('click', () => toggle(false)));
 // allow ESC to close
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && sidebar?.classList.contains('active')) toggle();
