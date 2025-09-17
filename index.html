@@ -4,9 +4,9 @@
         <title>Travlog</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./src/styles/scss/main.scss" />
+        <!-- <link rel="stylesheet" href="./src/styles/scss/main.scss" /> -->
     </head>
-    <body>
+    <body class="preload">
         <header class="header">
             <a class="header__logo" href="#">
                 <img
@@ -15,7 +15,7 @@
                 />
             </a>
             <!-- Desktop Navbar -->
-            <nav class="header__nav">
+            <nav class="header__nav" aria-label="Main menu">
                 <ul class="header__list">
                     <li class="header__link">
                         <a href="#">Home</a>
@@ -41,7 +41,7 @@
                 id="openSidebar"
                 class="header__hamburger"
                 type="button"
-                aria-label="Menu"
+                aria-label="Open Menu"
                 aria-controls="sidebar"
                 aria-expanded="false"
             >

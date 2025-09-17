@@ -1,3 +1,9 @@
+import '../styles/scss/main.scss';
+
+window.addEventListener('load', () => {
+    document.body.classList.remove('preload');
+});
+
 //sidebar functionality
 const sidebar = document.getElementById('sidebar');
 const hamburger = document.querySelector('.header__hamburger');
