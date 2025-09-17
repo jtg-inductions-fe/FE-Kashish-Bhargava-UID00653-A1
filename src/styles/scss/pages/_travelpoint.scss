@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 //Mobile view
 .travelpoint {
@@ -11,10 +12,12 @@
         margin-left: 1.11rem;
     }
     &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 0
+        );
         margin-top: 0.9rem;
         margin-left: 0.3rem;
     }
@@ -36,19 +39,25 @@
         color: variables.$secondary-text-color;
     }
     &__cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 0
+        );
     }
     &__card {
         border-radius: 2rem;
         margin-top: 1rem;
         width: 24.8rem;
         height: 9.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include mixins.flex(
+            $direction: column,
+            $justify: flex-start,
+            $alignment: center,
+            $gap: 0
+        );
+
         box-shadow: 1px 1px 7px 2px variables.$cards-shadow-color;
         &:hover {
             transform: translateY(-5px) scale(1.05);
