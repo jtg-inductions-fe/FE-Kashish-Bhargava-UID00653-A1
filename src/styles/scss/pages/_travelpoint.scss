@@ -59,9 +59,18 @@
         );
 
         box-shadow: 1px 1px 7px 2px variables.$cards-shadow-color;
+        transition:
+            transform 200ms ease,
+            box-shadow 200ms ease;
         &:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+            &:hover {
+                transform: none;
+            }
         }
     }
     &__stats {
