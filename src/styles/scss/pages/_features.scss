@@ -1,14 +1,17 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 //Mobile view
 .features {
     z-index: 1;
     max-width: 430px;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex(
+        $direction: column,
+        $justify: space-between,
+        $alignment: center,
+        $gap: 0
+    );
     margin-top: 5.6rem;
     &__content {
         margin-top: 5.3rem;
@@ -38,19 +41,24 @@
         color: variables.$secondary-text-color;
     }
     &__cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0.5rem;
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 0.5rem
+        );
         margin-top: 2rem;
     }
     &__card {
         border-radius: 2rem;
         width: 21rem;
         height: 18.1rem;
-        display: flex;
-        flex-direction: column;
+        @include mixins.flex(
+            $direction: column,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 0
+        );
         box-shadow: 1px 1px 7px 2px variables.$cards-shadow-color;
         &:hover {
             transform: translateY(-5px) scale(1.05);
