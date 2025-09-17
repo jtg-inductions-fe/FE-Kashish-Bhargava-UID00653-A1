@@ -1,0 +1,312 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.preload * {
+    transition: none !important;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+.header {
+    @include mixins.flex(
+        $direction: row,
+        $justify: space-between,
+        $alignment: center,
+        $gap: 0
+    );
+    padding: 0.8rem 1.3rem 0.8rem 1rem;
+    margin-top: 1.5rem;
+    margin-left: 0rem;
+
+    &__logo {
+        order: 1;
+    }
+
+    &__hamburger {
+        order: 2;
+    }
+
+    &__buttons {
+        display: none;
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    &__hamburger {
+        font-size: 2.5rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+        width: auto; //button width=icon size
+        height: auto; //button height=icon size
+        padding: 0;
+    }
+}
+
+// Sidebar(Mobile)
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$sidebar-background-color;
+    @include mixins.flex(
+        $direction: column,
+        $justify: flex-start,
+        $alignment: center,
+        $gap: 0
+    );
+    padding: 2rem 1rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition:
+        opacity 0.3s ease-in-out,
+        visibility 0.3s,
+        transform 0.3s ease-in-out;
+    // transition: transform var(--trans-dur) ease;
+
+    z-index: 1000;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    &__close {
+        align-self: flex-end;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 2rem;
+        color: variables.$secondary-text-color;
+        &:focus-visible {
+            outline: 2px solid variables.$primary-color;
+            outline-offset: 2px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0 0 2rem 0;
+
+        .sidebar__link a {
+            text-decoration: none;
+            font-size: 1.9rem;
+            font-weight: 700;
+            line-height: 4.5rem;
+            color: variables.$secondary-text-color;
+            font-family: variables.$font-primary;
+            transition: color 0.2s;
+
+            &:hover {
+                color: variables.$primary-text-color;
+            }
+            &:focus-visible {
+                outline: 2px solid variables.$primary-color;
+                outline-offset: 2px;
+            }
+        }
+    }
+
+    &__buttons {
+        @include mixins.flex(
+            $direction: column,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 1rem
+        );
+        width: 100%;
+        max-width: 200px;
+
+        .btn--login {
+            @include mixins.button(
+                $fontsize: 1.3rem,
+                $paddings: 0.8rem 1.2rem 0.8rem 1.2rem,
+                $backgroundcolor: variables.$default-background-color,
+                $textcolor: variables.$primary-text-color
+            );
+        }
+
+        .btn--signup {
+            @include mixins.button(
+                $fontsize: 1.3rem,
+                $paddings: 0.8rem 1.2rem 0.8rem 1.2rem,
+                $backgroundcolor: variables.$primary-color,
+                $textcolor: variables.$default-background-color
+            );
+        }
+    }
+}
+
+// Tablet view(1024 px and 1439 px)
+@media (min-width: variables.$bp-tablet) {
+    .header {
+        @include mixins.flex(
+            $direction: row,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 0
+        );
+        margin: 0;
+        padding: 0;
+    }
+    .header__hamburger {
+        order: 1;
+        padding: 0.6rem 4.2rem;
+        margin-top: 1.7rem;
+    }
+    .header__logo {
+        order: 2;
+        justify-self: center;
+        padding: 0.7rem 1.5rem 1rem 3.1rem;
+        margin-left: 7.3rem;
+        margin-top: 1.1rem;
+    }
+    .header__buttons {
+        order: 3;
+        @include mixins.flex(
+            $direction: row,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 1rem
+        );
+        width: auto;
+        max-width: 24.375rem;
+        padding: 1rem 1.5rem;
+        margin-right: 2.6rem;
+        margin-top: 1rem;
+
+        .btn--login {
+            @include mixins.button(
+                $fontsize: 0.8rem,
+                $paddings: 1.1rem 1.7rem 1.1rem 2rem,
+                $backgroundcolor: variables.$default-background-color,
+                $textcolor: variables.$primary-text-color
+            );
+        }
+
+        .btn--signup {
+            @include mixins.button(
+                $fontsize: 0.8rem,
+                $paddings: 1.1rem 1.9rem 1.1rem 2.2rem,
+                $backgroundcolor: variables.$primary-color,
+                $textcolor: variables.$default-background-color
+            );
+        }
+    }
+    .sidebar {
+        transform: translateX(-100%);
+        //  transition: transform var(--trans-dur) 0.3s ease;
+        &.active {
+            transform: translateX(0);
+        }
+    }
+    .sidebar__close {
+        align-self: flex-start;
+        margin-left: 4rem;
+    }
+    //Sidebar (tablet)
+    .sidebar__buttons {
+        display: none;
+    }
+}
+// Desktop view(1440px and above)
+@media (min-width: variables.$bp-desktop) {
+    .header {
+        @include mixins.flex(
+            $direction: row,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 0
+        );
+        padding: 3.9rem 6.2rem 1rem 9.4rem;
+    }
+    .header__logo {
+        order: 1;
+        margin: 0;
+        padding: 0;
+    }
+    .header__nav {
+        order: 2;
+        @include mixins.flex(
+            $direction: row,
+            $justify: center,
+            $alignment: stretch,
+            $gap: 0
+        );
+        margin-right: 2.5rem;
+
+        height: auto;
+
+        .header__list {
+            list-style: none;
+            @include mixins.flex(
+                $direction: row,
+                $justify: flex-start,
+                $alignment: stretch,
+                $gap: 4rem
+            );
+            li a {
+                text-decoration: none;
+                color: variables.$secondary-text-color;
+                font-family: variables.$font-primary;
+                transition: color 0.2s;
+                font-size: 0.9rem;
+
+                &:hover {
+                    color: variables.$primary-text-color;
+                }
+                &:focus-visible {
+                    outline: 2px solid variables.$primary-text-color;
+                    outline-offset: 2px;
+                }
+            }
+        }
+    }
+    .header__buttons {
+        order: 3;
+        @include mixins.flex(
+            $direction: row,
+            $justify: flex-end,
+            $alignment: stretch,
+            $gap: 1rem
+        );
+        width: auto;
+        max-width: 25rem;
+        padding: 0;
+        margin: 0;
+
+        .btn--login {
+            @include mixins.button(
+                $fontsize: 0.8rem,
+                $paddings: 1.1rem 2rem 1.1rem 2.2rem,
+                $backgroundcolor: variables.$default-background-color,
+                $textcolor: variables.$primary-text-color
+            );
+        }
+
+        .btn--signup {
+            @include mixins.button(
+                $fontsize: 0.8rem,
+                $paddings: 1.1rem 2rem 1.1rem 2.2rem,
+                $backgroundcolor: variables.$primary-color,
+                $textcolor: variables.$default-background-color
+            );
+        }
+    }
+    .header__hamburger,
+    .sidebar {
+        display: none;
+    }
+}

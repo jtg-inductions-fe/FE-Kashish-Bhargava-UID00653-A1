@@ -11,7 +11,7 @@
         "preview": "vite preview",
         "lint": "npx eslint .",
         "prettier": "npx prettier --write ./",
-        "lint:fix": "yarn eslint . --fix",
+        "lint:fix": "eslint . --fix",
         "prepare": "husky",
         "pre-commit": "lint-staged"
     },
@@ -27,8 +27,8 @@
         "husky": "9.1.7",
         "lint-staged": "15.3.0",
         "prettier": "3.3.3",
-        "sass": "1.78.0",
-        "sass-embedded": "1.78.0",
+        "sass": "^1.78.0",
+        "sass-embedded": "^1.78.0",
         "sharp": "0.33.5",
         "vite": "5.4.1",
         "vite-plugin-html": "3.2.2",
@@ -39,6 +39,5 @@
             "eslint --max-warnings=0"
         ],
         "*.{html,scss,json}": "prettier --check"
-    },
-    "dependencies": {}
+    }
 }

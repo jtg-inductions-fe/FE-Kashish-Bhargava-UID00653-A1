@@ -1,11 +1,13 @@
 //Colors
+// @use '../base/typography';
 $default-background-color: #fff !default;
 $primary-color: #5d50c6 !default;
 $secondary-color: #f85e9f !default;
 $primary-background-color: #ff5722 !default;
 $secondary-background-color: #facd49 !default;
 $primary-text-color: #3a2d2f !default;
-$secondary-text-color: #938789 !default;
+$secondary-text-color: #5c595a !default;
+$sidebar-background-color: #fcb8d0 !default;
 
 //font-family
 $font-primary: 'Roboto', sans-serif;
@@ -32,3 +34,8 @@ $space-5: 1.5rem;
 $space-6: 2rem;
 $space-7: 3rem;
 $space-8: 4rem;
+
+// breakpoints
+$bp-tablet: 1024px !default;
+$bp-desktop: 1440px !default;
+$bp-mobile: 430px !default;

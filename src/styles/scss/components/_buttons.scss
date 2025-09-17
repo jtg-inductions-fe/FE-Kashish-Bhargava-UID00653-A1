@@ -1,5 +1,4 @@
-@use '../abstracts' as *;
-
+@use '../abstracts/variables';
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -12,7 +11,9 @@
     cursor: pointer;
     transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
     border: none;
 
     &:hover {
@@ -21,7 +22,7 @@
     }
 
     &:focus-visible {
-        outline: 3px solid;
+        outline: 3px solid variables.$primary-color;
         outline-offset: 2px;
     }
 

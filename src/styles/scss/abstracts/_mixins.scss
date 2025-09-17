@@ -1,3 +1,4 @@
+@use '../abstracts/variables';
 @mixin flex-centre($direction: row, $gap: null) {
     display: flex;
     flex-direction: $direction;
@@ -8,7 +9,33 @@
     }
 }
 
-// Alias for consistency with CSS spelling
+//Alias for consistency with CSS spelling
 @mixin flex-center($direction: row, $gap: null) {
     @include flex-centre($direction, $gap);
+}
+
+@mixin button($fontsize, $paddings, $backgroundcolor, $textcolor) {
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: variables.$font-primary;
+    border-radius: 999px;
+    font-size: $fontsize;
+    padding: $paddings;
+    font-weight: 700;
+    background-color: $backgroundcolor;
+    color: $textcolor;
+}
+
+@mixin flex(
+    $direction: row,
+    $justify: flex-start,
+    $alignment: stretch,
+    $gap: 0
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignment;
+    gap: $gap;
 }
