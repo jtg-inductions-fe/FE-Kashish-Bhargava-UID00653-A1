@@ -1,5 +1,6 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
+@use '../vendors/icomoon';
 .testimonial {
     max-width: 430px;
     width: 100%;
@@ -27,8 +28,9 @@
     }
     .swiper {
         width: 430px;
-        height: 500px;
+        height: 700px;
         .swiper-slide {
+            height: 500px;
             margin-top: 2.3rem;
             display: flex;
             flex-direction: column;
@@ -42,17 +44,71 @@
                 }
             }
             .userinfo {
+                margin-top: 0.2rem;
                 font-size: 1.4rem;
                 &__name {
                     color: variables.$primary-background-color;
                     font-size: 1.75rem;
                 }
             }
+            .userstars {
+                margin-top: -5rem;
+                display: flex;
+                justify-content: space-between;
+                gap: 1.2rem;
+
+                .icon-testimonials-star {
+                    font-size: 1.8rem;
+                }
+            }
+            .userbio {
+                text-align: center;
+                font-size: 1.125rem;
+                line-height: 1.8rem;
+                margin-bottom: 3.7rem;
+                margin-left: 1.3rem;
+                margin-right: 1.3rem;
+            }
         }
-        .swiper-pagination {
+        .swiper-pagination-horizontal {
+            margin-bottom: 7.8rem;
+        }
+        .swiper-pagination-bullets {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
         }
         .swiper-pagination-bullet {
-            background-color: pink;
+            background-color: variables.$pagination-bullet-color;
+            width: 1.5rem;
+            height: 1.5rem;
+            &-active {
+                background-color: variables.$secondary-color;
+            }
+        }
+
+        .swiper-button-prev::before {
+            //   --swiper-navigation-size: 44px;
+            //   --swiper-navigation-top-offset: 50%;
+            //   --swiper-navigation-sides-offset: 10px;
+            //   --swiper-navigation-color: var(--swiper-theme-color);\
+            font-family: 'icomoon';
+            content: '\e902';
+            content: '\e903';
+            content: '\e904';
+            color: black;
+            margin-left: 8px;
+            margin-bottom: -37rem;
+            font-size: 4rem;
+        }
+
+        .swiper-button-next::before {
+            font-family: 'icomoon';
+            content: '\e900';
+            content: '\e901';
+            margin-left: 8px;
+            font-size: 4rem;
         }
     }
 }
