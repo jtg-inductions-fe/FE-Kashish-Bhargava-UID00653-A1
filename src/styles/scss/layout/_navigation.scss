@@ -29,9 +29,6 @@
         left: -20vw;
     }
 }
-.no-scroll {
-    overflow: hidden;
-}
 .header {
     @include mixins.flex(
         $direction: row,
