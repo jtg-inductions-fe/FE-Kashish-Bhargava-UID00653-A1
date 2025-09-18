@@ -32,6 +32,7 @@
         z-index: 6;
         width: 14rem;
         height: 3.5rem;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         @include mixins.button(
             $fontsize: 0.9rem,
             $paddings: 0.6rem 1rem 0.8rem 1.2rem,
