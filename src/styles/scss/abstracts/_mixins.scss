@@ -1,19 +1,6 @@
 @use '../abstracts/variables';
-@mixin flex-centre($direction: row, $gap: null) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
-    @if $gap != null {
-        gap: $gap;
-    }
-}
 
-//Alias for consistency with CSS spelling
-@mixin flex-center($direction: row, $gap: null) {
-    @include flex-centre($direction, $gap);
-}
-
+//Button Mixin
 @mixin button($fontsize, $paddings, $backgroundcolor, $textcolor) {
     border: none;
     text-align: center;
@@ -36,6 +23,7 @@
     }
 }
 
+//Flexbox Mixin
 @mixin flex(
     $direction: row,
     $justify: flex-start,
