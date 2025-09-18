@@ -44,6 +44,9 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease;
 
     &__logo {
         order: 1;
@@ -75,6 +78,10 @@
             outline-offset: 2px;
         }
     }
+}
+.header.scrolled {
+    background-color: variables.$default-background-color;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 // Sidebar(Mobile)
@@ -179,7 +186,7 @@
     }
 }
 // Tablet view(1024 px and 1439 px)
-@media (min-width: variables.$bp-tablet) {
+@media (min-width: variables.$tb) {
     .header {
         @include mixins.flex(
             $direction: row,
@@ -251,7 +258,7 @@
     }
 }
 // Desktop view(1440px and above)
-@media (min-width: variables.$bp-desktop) {
+@media (min-width: variables.$db) {
     .header {
         @include mixins.flex(
             $direction: row,
