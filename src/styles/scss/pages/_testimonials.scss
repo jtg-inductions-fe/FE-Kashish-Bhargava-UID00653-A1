@@ -18,19 +18,20 @@
         font-weight: 700;
         color: variables.$secondary-color;
         margin-left: 0.4rem;
+        margin-bottom: 0;
     }
     &__heading {
         text-align: center;
         font-size: 2rem;
         line-height: 2.4rem;
         font-weight: 700;
-        margin-top: -0.4rem;
+        margin-top: 0.9rem;
     }
     .swiper {
-        width: 430px;
-        height: 700px;
+        width: 26.875rem;
+        height: 43.75rem;
         .swiper-slide {
-            height: 500px;
+            height: 31.25rem;
             margin-top: 2.3rem;
             display: flex;
             flex-direction: column;
@@ -50,9 +51,10 @@
                     color: variables.$primary-background-color;
                     font-size: 1.75rem;
                 }
+                margin-bottom: 0;
             }
             .userstars {
-                margin-top: -5rem;
+                margin-top: -2rem;
                 display: flex;
                 justify-content: space-between;
                 gap: 1.2rem;
@@ -87,27 +89,63 @@
                 background-color: variables.$secondary-color;
             }
         }
-
+        .swiper-button-prev {
+            margin-left: 0.8rem;
+            margin-top: 16.5rem;
+            width: 4.0625rem;
+            height: 4.0625rem;
+            border-radius: 50%;
+            background: variables.$default-background-color;
+            box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition:
+                background 0.2s,
+                box-shadow 0.2s;
+            cursor: pointer;
+            border: 0.09375rem solid variables.$carousel-button-border;
+            &:hover {
+                background: variables.$dark-default-background-color;
+                box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+            }
+        }
+        .swiper-button-next {
+            margin-right: 0.6rem;
+            margin-top: 16.5rem;
+            width: 4.0625rem;
+            height: 4.0625rem;
+            border-radius: 50%;
+            background: variables.$primary-color;
+            box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition:
+                background 0.2s,
+                box-shadow 0.2s;
+            cursor: pointer;
+            border: 0.09375rem solid variables.$default-background-color;
+            &:hover {
+                background: variables.$dark-primary-color;
+                box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+            }
+        }
         .swiper-button-prev::before {
-            //   --swiper-navigation-size: 44px;
-            //   --swiper-navigation-top-offset: 50%;
-            //   --swiper-navigation-sides-offset: 10px;
-            //   --swiper-navigation-color: var(--swiper-theme-color);\
             font-family: 'icomoon';
             content: '\e902';
             content: '\e903';
             content: '\e904';
-            color: black;
-            margin-left: 8px;
-            margin-bottom: -37rem;
+            color: variables.$primary-text-color;
             font-size: 4rem;
+            margin-left: 0rem;
         }
-
         .swiper-button-next::before {
             font-family: 'icomoon';
             content: '\e900';
             content: '\e901';
-            margin-left: 8px;
+            color: variables.$default-background-color;
+            margin-right: 0rem;
             font-size: 4rem;
         }
     }
