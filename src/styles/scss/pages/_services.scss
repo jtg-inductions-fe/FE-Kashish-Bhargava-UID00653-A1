@@ -88,7 +88,7 @@
 }
 
 //Tablet View
-@include mixins.response(variables.$tb) {
+@include mixins.breakpoints(variables.$tb) {
     .services {
         max-width: 64rem;
         margin-top: 5.5rem;
@@ -134,7 +134,7 @@
 }
 
 //Desktop view
-@include mixins.response(variables.$db) {
+@include mixins.breakpoints(variables.$db) {
     .services {
         max-width: 90rem;
         flex-direction: row;
