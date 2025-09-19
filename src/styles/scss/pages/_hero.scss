@@ -2,12 +2,11 @@
 @use '../abstracts/variables';
 @use '../components/buttons';
 
-.hero {
+.main-section {
     //Mobile view
     max-width: 26.875rem;
     width: 100%;
     margin: 0 auto;
-    padding-top: 3.2rem;
     //Tablet View
     @include mixins.breakpoints(variables.$tb) {
         max-width: 64rem;
@@ -15,6 +14,13 @@
     //Desktop view
     @include mixins.breakpoints(variables.$db) {
         max-width: 90rem;
+    }
+}
+
+.hero {
+    padding-top: 3.2rem;
+    //Desktop view
+    @include mixins.breakpoints(variables.$db) {
         @include mixins.flex(
             $direction: row,
             $justify: center,

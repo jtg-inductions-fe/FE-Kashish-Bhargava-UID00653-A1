@@ -9,6 +9,7 @@ const sidebar = document.getElementById('sidebar');
 const hamburger = document.querySelector('.header__hamburger');
 const closeSidebar = document.getElementById('closeSidebar');
 const mainContent = document.getElementById('main-content');
+const header = document.querySelector('.header');
 const toggle = () => {
     if (!sidebar) return;
     sidebar.classList.toggle('active');
@@ -39,14 +40,4 @@ document
 // allow ESC to close
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && sidebar?.classList.contains('active')) toggle();
-});
-
-//navbar scroll functionality
-const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
 });
