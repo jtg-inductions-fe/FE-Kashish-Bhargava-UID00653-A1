@@ -3,19 +3,8 @@
 
 //Mobile view
 .travelpoint {
+    position: relative;
     z-index: 1;
-    max-width: 26.875rem;
-    width: 100%;
-    margin: 0 auto;
-    //Tablet View
-    @include mixins.breakpoints(variables.$tb) {
-        max-width: 64rem;
-    }
-    //Desktop View
-    @include mixins.breakpoints(variables.$db) {
-        max-width: 90rem;
-    }
-
     &__image {
         margin-top: 4.4rem;
         margin-left: 1.11rem;
@@ -181,7 +170,7 @@
         @include mixins.breakpoints(variables.$db) {
             display: block;
             position: absolute;
-            top: 126.5rem;
+            top: 16.7rem;
             right: 3.5rem;
         }
     }
