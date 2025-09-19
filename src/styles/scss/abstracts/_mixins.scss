@@ -6,15 +6,15 @@
     text-align: center;
     cursor: pointer;
     font-family: variables.$font-primary;
-    border-radius: 999px;
+    border-radius: 62.4375rem;
     font-size: $fontsize;
     padding: $paddings;
     font-weight: 700;
     background-color: $backgroundcolor;
     color: $textcolor;
     &:focus-visible {
-        outline: 2px solid variables.$primary-color;
-        outline-offset: 2px;
+        outline: 0.125rem solid variables.$primary-color;
+        outline-offset: 0.125rem;
     }
     &:disabled,
     &[aria-disabled='true'] {
@@ -39,15 +39,15 @@
 
 @mixin breakpoints($breakpoint) {
     @if $breakpoint == variables.$db {
-        @media (min-width: 90rem) {
+        @media (min-width: variables.$db) {
             @content;
         }
     } @else if $breakpoint == variables.$tb {
-        @media (min-width: 64rem) {
+        @media (min-width: variables.$tb) {
             @content;
         }
     } @else {
-        @media (min-width: 28.75rem) {
+        @media (min-width: variables.$mb) {
             @content;
         }
     }
