@@ -7,9 +7,28 @@
     max-width: 26.875rem;
     width: 100%;
     margin: 0 auto;
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        max-width: 64rem;
+    }
+    //Desktop View
+    @include mixins.breakpoints(variables.$db) {
+        max-width: 90rem;
+    }
+
     &__image {
         margin-top: 4.4rem;
         margin-left: 1.11rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-top: 7.9rem;
+            margin-left: 6rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            margin-top: 7.4rem;
+            margin-left: 0;
+        }
     }
     &__content {
         @include mixins.flex(
@@ -20,17 +39,48 @@
         );
         margin-top: 0.9rem;
         margin-left: 0.3rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-top: 1.6rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            margin-left: 33rem;
+            margin-top: -44rem;
+        }
     }
+
     &__title {
         letter-spacing: 0.225rem;
         color: variables.$secondary-color;
         margin-bottom: 0;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.5rem;
+        }
     }
+
     &__heading {
         text-align: center;
         margin-top: 0.7rem;
         margin-left: 0.8rem;
         line-height: 2.5rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 2.6rem;
+            margin-top: 1rem;
+            margin-right: 1rem;
+            margin-left: 0.7rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            margin-top: 0.5rem;
+            margin-left: 20rem;
+            margin-right: 8.9rem;
+            line-height: 3.7rem;
+            font-size: 2.75rem;
+            margin-bottom: 0;
+        }
     }
     &__para {
         text-align: center;
@@ -38,6 +88,18 @@
         margin-left: 1.7rem;
         margin-right: 1.7rem;
         color: variables.$secondary-text-color;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.2rem;
+            margin-left: 6rem;
+            margin-right: 6.4rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            text-align: left;
+            margin-left: 21.5rem;
+            margin-top: 1.2rem;
+        }
     }
     &__cards {
         @include mixins.flex(
@@ -46,6 +108,22 @@
             $alignment: center,
             $gap: 0
         );
+
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 1rem;
+            margin-top: 1.7rem;
+            margin-right: 6.2rem;
+            margin-left: 5.7rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            flex-direction: row;
+            margin-left: 21.6rem;
+            margin-right: 7.5rem;
+        }
     }
     &__card {
         border-radius: 2rem;
@@ -74,6 +152,11 @@
                 transform: none;
             }
         }
+
+        //Tablet View
+        @include mixins.breakpoints(variables.$db) {
+            width: 13rem;
+        }
     }
     &__stats {
         font-size: 2.2rem;
@@ -81,91 +164,21 @@
         margin-bottom: 0;
         color: variables.$primary-background-color;
     }
+
     &__service {
         font-size: 1.2rem;
         padding-top: 0;
         margin-top: 0;
-    }
-    .travelpointbgpattern {
-        display: none;
-    }
-}
-//tablet view
-@include mixins.response(variables.$tb) {
-    .travelpoint {
-        max-width: 64rem;
-        &__image {
-            margin-top: 7.9rem;
-            margin-left: 6rem;
-        }
-
-        &__content {
-            margin-top: 1.6rem;
-        }
-        &__title {
-            font-size: 1.5rem;
-        }
-        &__heading {
-            font-size: 2.6rem;
-            margin-top: 1rem;
-            margin-right: 1rem;
-            margin-left: 0.7rem;
-        }
-
-        &__para {
-            font-size: 1.2rem;
-            margin-left: 6rem;
-            margin-right: 6.4rem;
-        }
-        &__cards {
-            flex-direction: row;
-            flex-wrap: wrap;
-            row-gap: 1rem;
-            margin-top: 1.7rem;
-            margin-right: 6.2rem;
-            margin-left: 5.7rem;
-        }
-        &__service {
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
             margin-top: 0.4rem;
         }
     }
-}
 
-//Desktop view
-@include mixins.response(variables.$db) {
-    .travelpoint {
-        max-width: 90rem;
-        &__image {
-            margin-top: 7.4rem;
-            margin-left: 0;
-        }
-        &__content {
-            margin-left: 33rem;
-            margin-top: -44rem;
-        }
-        &__heading {
-            margin-top: 0.5rem;
-            margin-left: 20rem;
-            margin-right: 8.9rem;
-            line-height: 3.7rem;
-            font-size: 2.75rem;
-            margin-bottom: 0;
-        }
-
-        &__para {
-            text-align: left;
-            margin-left: 21.5rem;
-            margin-top: 1.2rem;
-        }
-        &__cards {
-            flex-direction: row;
-            margin-left: 21.6rem;
-            margin-right: 7.5rem;
-        }
-        &__card {
-            width: 13rem;
-        }
-        .travelpointbgpattern {
+    .travelpointbgpattern {
+        display: none;
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
             display: block;
             position: absolute;
             top: 126.5rem;
