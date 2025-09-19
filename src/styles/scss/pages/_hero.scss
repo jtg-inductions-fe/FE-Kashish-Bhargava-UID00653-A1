@@ -18,6 +18,7 @@
 }
 
 .hero {
+    position: relative;
     padding-top: 3.2rem;
     //Desktop view
     @include mixins.breakpoints(variables.$db) {
@@ -343,12 +344,12 @@
         @include mixins.breakpoints(variables.$tb) {
             display: block;
             position: absolute;
-            top: 79.2rem;
+            top: 73rem;
             left: 2.2rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
-            top: 54.1rem;
+            top: 45.6rem;
             left: 2.5rem;
         }
     }
