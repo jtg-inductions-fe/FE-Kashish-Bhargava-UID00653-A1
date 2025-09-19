@@ -5,8 +5,6 @@ window.addEventListener('load', () => {
 });
 
 //sidebar functionality
-
-//sidebar functionality
 const sidebar = document.getElementById('sidebar');
 const hamburger = document.querySelector('.header__hamburger');
 const closeSidebar = document.getElementById('closeSidebar');
