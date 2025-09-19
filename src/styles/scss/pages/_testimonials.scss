@@ -27,6 +27,9 @@
         font-weight: 700;
         margin-top: 0.9rem;
     }
+    &__background {
+        display: none;
+    }
     .swiper {
         width: 26.875rem;
         height: 43.75rem;
@@ -149,4 +152,8 @@
             font-size: 4rem;
         }
     }
+}
+
+//Tablet View
+@media (min-width: variables.$bp-tablet) {
 }
