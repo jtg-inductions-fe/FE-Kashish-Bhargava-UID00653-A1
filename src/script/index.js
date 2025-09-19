@@ -10,6 +10,7 @@ const hamburger = document.querySelector('.header__hamburger');
 const closeSidebar = document.getElementById('closeSidebar');
 const mainContent = document.getElementById('main-content');
 const header = document.querySelector('.header');
+
 const toggle = () => {
     if (!sidebar) return;
     sidebar.classList.toggle('active');
