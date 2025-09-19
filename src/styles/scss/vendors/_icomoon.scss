@@ -4,8 +4,9 @@
     src:
         url('../../assets/fonts-icons/icomoon.eot?nsxad1#iefix')
             format('embedded-opentype'),
-        url('../../assets/fonts-icons/icomoon.ttf?nsxad1') format('truetype'),
+        url('../../assets/fonts-icons/icomoon.woff?nsxad1') format('woff2'),
         url('../../assets/fonts-icons/icomoon.woff?nsxad1') format('woff'),
+        url('../../assets/fonts-icons/icomoon.ttf?nsxad1') format('truetype'),
         url('../../assets/fonts-icons/icomoon.svg?nsxad1#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
@@ -16,7 +17,6 @@
 [class*=' icon-'] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    //   speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;

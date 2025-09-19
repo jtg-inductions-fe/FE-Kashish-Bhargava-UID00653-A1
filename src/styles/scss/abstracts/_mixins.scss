@@ -37,12 +37,12 @@
     gap: $gap;
 }
 
-@mixin response($breakpoint) {
+@mixin breakpoints($breakpoint) {
     @if $breakpoint == variables.$db {
         @media (min-width: 90rem) {
             @content;
         }
-    } @else if$breakpoint == variables.$tb {
+    } @else if $breakpoint == variables.$tb {
         @media (min-width: 64rem) {
             @content;
         }

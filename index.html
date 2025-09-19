@@ -10,7 +10,7 @@
         />
     </head>
     <body class="preload">
-        <div class="wrapper1">
+        <div class="wrapper">
             <header class="header">
                 <a class="header__logo" href="#">
                     <img
@@ -22,7 +22,7 @@
                 <nav class="header__nav" aria-label="Main menu">
                     <ul class="header__list">
                         <li class="header__link">
-                            <a href="#">Home</a>
+                            <a href="#" aria-current="page">Home</a>
                         </li>
                         <li class="header__link">
                             <a href="#">Discover</a>
@@ -55,7 +55,12 @@
                 </button>
             </header>
             <!-- Sidebar (Mobile/Tablet) -->
-            <aside class="sidebar" id="sidebar" aria-hidden="true">
+            <aside
+                class="sidebar"
+                id="sidebar"
+                aria-hidden="true"
+                aria-label="Sidebar menu"
+            >
                 <button
                     class="sidebar__close"
                     id="closeSidebar"
@@ -87,85 +92,90 @@
                     </button>
                 </div>
             </aside>
-            <section class="hero">
-                <div class="hero__image">
-                    <img
-                        fetchpriority="high"
-                        decoding="async"
-                        src="src/assets/images/hero-section/hero-image.png"
-                        alt="People traveling at a scenic destination"
-                    />
-                </div>
-                <div class="hero__content">
-                    <button type="button" class="btn btn--explore">
-                        <span class="exploretext">Explore the world!</span
-                        ><i class="icon-hero-explore" aria-hidden="true"></i>
-                    </button>
-                    <h1 class="hero__title">
-                        Travel <span class="pink">top destination</span> of the
-                        world
-                    </h1>
-                    <p class="hero__subtitle">
-                        We always make our customer happy by providing as many
-                        choices as possible
-                    </p>
-                    <button type="button" class="btn btn--getstarted">
-                        Get Started
-                    </button>
-                    <button type="button" class="btn btn--watchdemo">
-                        <span class="hero__playbutton"
-                            ><img
-                                src="src/assets/images/hero-section/hero-play-circle.svg"
-                                alt=""
-                                aria-hidden="true" /></span
-                        >Watch Demo
-                    </button>
-                </div>
-                <div class="hero__partners">
-                    <div class="hero__list1">
+            <main id="main-content">
+                <section class="hero">
+                    <div class="hero__image">
                         <img
-                            loading="lazy"
-                            src="src/assets/images/hero-section/hero-tripadvisor-logo.png"
-                            alt="tripadvisor"
+                            fetchpriority="high"
+                            decoding="async"
+                            src="src/assets/images/hero-section/hero-image.png"
+                            alt="People traveling at a scenic destination"
                         />
                     </div>
-                    <div class="hero__list2">
+                    <div class="hero__content">
+                        <button type="button" class="btn btn--explore">
+                            <span class="exploretext">Explore the world!</span
+                            ><i
+                                class="icon-hero-explore"
+                                aria-hidden="true"
+                            ></i>
+                        </button>
+                        <h1 class="hero__title">
+                            Travel <span class="pink">top destination</span> of
+                            the world
+                        </h1>
+                        <p class="hero__subtitle">
+                            We always make our customer happy by providing as
+                            many choices as possible
+                        </p>
+                        <button type="button" class="btn btn--getstarted">
+                            Get Started
+                        </button>
+                        <button type="button" class="btn btn--watchdemo">
+                            <span class="hero__playbutton"
+                                ><img
+                                    src="src/assets/images/hero-section/hero-play-circle.svg"
+                                    alt=""
+                                    aria-hidden="true" /></span
+                            >Watch Demo
+                        </button>
+                    </div>
+                    <div class="hero__partners">
+                        <div class="hero__list1">
+                            <img
+                                loading="lazy"
+                                src="src/assets/images/hero-section/hero-tripadvisor-logo.png"
+                                alt="tripadvisor"
+                            />
+                        </div>
+                        <div class="hero__list2">
+                            <img
+                                loading="lazy"
+                                src="src/assets/images/hero-section/hero-Expedia-logo.png"
+                                alt="expedia"
+                            />
+                        </div>
+                        <div class="hero__list3">
+                            <img
+                                loading="lazy"
+                                src="src/assets/images/hero-section/hero-booking-logo.png"
+                                alt="booking.com"
+                            />
+                        </div>
+                        <div class="hero__list4">
+                            <img
+                                loading="lazy"
+                                src="src/assets/images/hero-section/hero-airbnb-logo.png"
+                                alt="airbnb"
+                            />
+                        </div>
+                        <div class="hero__list5">
+                            <img
+                                loading="lazy"
+                                src="src/assets/images/hero-section/hero-orbitz-logo.png"
+                                alt="orbitz"
+                            />
+                        </div>
+                    </div>
+                    <div class="herobgpattern">
                         <img
-                            loading="lazy"
-                            src="src/assets/images/hero-section/hero-Expedia-logo.png"
-                            alt="expedia"
+                            src="src/assets/images/hero-section/hero-arrow.png"
+                            alt=""
+                            aria-hidden="true"
                         />
                     </div>
-                    <div class="hero__list3">
-                        <img
-                            loading="lazy"
-                            src="src/assets/images/hero-section/hero-booking-logo.png"
-                            alt="booking.com"
-                        />
-                    </div>
-                    <div class="hero__list4">
-                        <img
-                            loading="lazy"
-                            src="src/assets/images/hero-section/hero-airbnb-logo.png"
-                            alt="airbnb"
-                        />
-                    </div>
-                    <div class="hero__list5">
-                        <img
-                            loading="lazy"
-                            src="src/assets/images/hero-section/hero-orbitz-logo.png"
-                            alt="orbitz"
-                        />
-                    </div>
-                </div>
-                <div class="herobgpattern">
-                    <img
-                        src="src/assets/images/hero-section/hero-arrow.png"
-                        alt=""
-                        aria-hidden="true"
-                    />
-                </div>
-            </section>
+                </section>
+            </main>
         </div>
         <script type="module" src="./src/script/index.js"></script>
     </body>
