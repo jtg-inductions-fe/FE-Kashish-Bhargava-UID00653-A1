@@ -103,6 +103,10 @@
 
     z-index: 1000;
 
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+
     &.active {
         opacity: 1;
         visibility: visible;
