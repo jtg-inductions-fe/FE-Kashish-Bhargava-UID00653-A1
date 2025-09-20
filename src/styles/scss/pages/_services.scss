@@ -2,6 +2,7 @@
 @use '../abstracts/mixins';
 
 .services {
+    z-index: 1;
     @include mixins.flex(
         $direction: column,
         $justify: center,
