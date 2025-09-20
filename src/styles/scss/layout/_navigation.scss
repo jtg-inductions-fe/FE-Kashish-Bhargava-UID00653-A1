@@ -8,6 +8,27 @@
 .no-scroll {
     overflow: hidden;
 }
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: radial-gradient(
+            circle,
+            variables.$primary-gradient-color variables.$primary-gradient-start,
+            variables.$default-background-color variables.$primary-gradient-end
+        );
+        border-radius: 50%;
+        width: 80vw;
+        height: 80vw;
+        z-index: -2;
+        top: -20vw;
+        left: -20vw;
+    }
+}
 .header {
     @include mixins.flex(
         $direction: row,
@@ -18,9 +39,15 @@
     padding: 0.8rem 1.3rem 0.8rem 1rem;
     margin-top: 1.5rem;
     margin-left: 0rem;
+    background: transparent;
+    z-index: 100;
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease;
 
     &__logo {
         order: 1;
+        z-index: 4;
     }
 
     &__hamburger {
@@ -43,6 +70,10 @@
         width: auto; //button width=icon size
         height: auto; //button height=icon size
         padding: 0;
+        &:focus-visible {
+            outline: 0.1875rem solid variables.$primary-color;
+            outline-offset: 0.125rem;
+        }
     }
 }
 
@@ -69,7 +100,6 @@
         opacity 0.3s ease-in-out,
         visibility 0.3s,
         transform 0.3s ease-in-out;
-    // transition: transform var(--trans-dur) ease;
 
     z-index: 1000;
 
@@ -89,8 +119,8 @@
         margin-bottom: 2rem;
         color: variables.$secondary-text-color;
         &:focus-visible {
-            outline: 2px solid variables.$primary-color;
-            outline-offset: 2px;
+            outline: 0.125rem solid variables.$primary-color;
+            outline-offset: 0.125rem;
         }
     }
 
@@ -113,8 +143,8 @@
                 color: variables.$primary-text-color;
             }
             &:focus-visible {
-                outline: 2px solid variables.$primary-color;
-                outline-offset: 2px;
+                outline: 0.125rem solid variables.$primary-color;
+                outline-offset: 0.125rem;
             }
         }
     }
@@ -127,7 +157,7 @@
             $gap: 1rem
         );
         width: 100%;
-        max-width: 200px;
+        max-width: 12.5rem;
 
         .btn--login {
             @include mixins.button(
@@ -148,9 +178,8 @@
         }
     }
 }
-
-// Tablet view(1024 px and 1439 px)
-@media (min-width: variables.$bp-tablet) {
+// Tablet view
+@media (min-width: variables.$tb) {
     .header {
         @include mixins.flex(
             $direction: row,
@@ -165,6 +194,7 @@
         order: 1;
         padding: 0.6rem 4.2rem;
         margin-top: 1.7rem;
+        z-index: 4;
     }
     .header__logo {
         order: 2;
@@ -207,7 +237,6 @@
     }
     .sidebar {
         transform: translateX(-100%);
-        //  transition: transform var(--trans-dur) 0.3s ease;
         &.active {
             transform: translateX(0);
         }
@@ -221,8 +250,8 @@
         display: none;
     }
 }
-// Desktop view(1440px and above)
-@media (min-width: variables.$bp-desktop) {
+// Desktop view
+@media (min-width: variables.$db) {
     .header {
         @include mixins.flex(
             $direction: row,
@@ -246,7 +275,7 @@
             $gap: 0
         );
         margin-right: 2.5rem;
-
+        z-index: 4;
         height: auto;
 
         .header__list {
@@ -268,8 +297,8 @@
                     color: variables.$primary-text-color;
                 }
                 &:focus-visible {
-                    outline: 2px solid variables.$primary-text-color;
-                    outline-offset: 2px;
+                    outline: 0.125rem solid variables.$primary-text-color;
+                    outline-offset: 0.125rem;
                 }
             }
         }

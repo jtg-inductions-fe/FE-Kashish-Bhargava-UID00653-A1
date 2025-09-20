@@ -1,6 +1,5 @@
 //Colors
-// @use '../base/typography';
-$default-background-color: #fff !default;
+$default-background-color: #ffffff !default;
 $primary-color: #5d50c6 !default;
 $secondary-color: #f85e9f !default;
 $primary-background-color: #ff5722 !default;
@@ -8,7 +7,10 @@ $secondary-background-color: #facd49 !default;
 $primary-text-color: #3a2d2f !default;
 $secondary-text-color: #5c595a !default;
 $sidebar-background-color: #fcb8d0 !default;
-
+$primary-gradient-color: #ffd9cd !default;
+$button-border-color: #efebea !default;
+$primary-gradient-start: 30%;
+$primary-gradient-end: 70%;
 //font-family
 $font-primary: 'Roboto', sans-serif;
 
@@ -36,6 +38,6 @@ $space-7: 3rem;
 $space-8: 4rem;
 
 // breakpoints
-$bp-tablet: 1024px !default;
-$bp-desktop: 1440px !default;
-$bp-mobile: 430px !default;
+$mb: 28.75rem !default; //Mobile breakpoint
+$tb: 64rem !default; //tablet breakpoint
+$db: 90rem !default; //desktop breakpoint

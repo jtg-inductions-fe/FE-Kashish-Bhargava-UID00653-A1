@@ -2,7 +2,6 @@
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
     font-family: variables.$font-primary;
     font-weight: 700;
     font-size: 1rem;
@@ -18,12 +17,7 @@
 
     &:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    &:focus-visible {
-        outline: 3px solid variables.$primary-color;
-        outline-offset: 2px;
+        box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.15);
     }
 
     @media (prefers-reduced-motion: reduce) {

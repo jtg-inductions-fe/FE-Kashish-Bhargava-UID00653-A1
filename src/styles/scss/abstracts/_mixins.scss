@@ -1,32 +1,29 @@
 @use '../abstracts/variables';
-@mixin flex-centre($direction: row, $gap: null) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
-    @if $gap != null {
-        gap: $gap;
-    }
-}
 
-//Alias for consistency with CSS spelling
-@mixin flex-center($direction: row, $gap: null) {
-    @include flex-centre($direction, $gap);
-}
-
+//Button Mixin
 @mixin button($fontsize, $paddings, $backgroundcolor, $textcolor) {
     border: none;
     text-align: center;
     cursor: pointer;
     font-family: variables.$font-primary;
-    border-radius: 999px;
+    border-radius: 62.4375rem;
     font-size: $fontsize;
     padding: $paddings;
     font-weight: 700;
     background-color: $backgroundcolor;
     color: $textcolor;
+    &:focus-visible {
+        outline: 0.125rem solid variables.$primary-color;
+        outline-offset: 0.125rem;
+    }
+    &:disabled,
+    &[aria-disabled='true'] {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
 }
 
+//Flexbox Mixin
 @mixin flex(
     $direction: row,
     $justify: flex-start,
@@ -38,4 +35,20 @@
     justify-content: $justify;
     align-items: $alignment;
     gap: $gap;
+}
+
+@mixin breakpoints($breakpoint) {
+    @if $breakpoint == variables.$db {
+        @media (min-width: variables.$db) {
+            @content;
+        }
+    } @else if $breakpoint == variables.$tb {
+        @media (min-width: variables.$tb) {
+            @content;
+        }
+    } @else {
+        @media (min-width: variables.$mb) {
+            @content;
+        }
+    }
 }

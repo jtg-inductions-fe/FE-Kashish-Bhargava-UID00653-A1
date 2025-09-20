@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'icomoon';
-    src: url('../../assets/fonts-icons/icomoon.eot?mlpfdl');
+    src: url('../../assets/fonts-icons/icomoon.eot?nsxad1');
     src:
-        url('../../assets/fonts-icons/icomoon.eot?mlpfdl#iefix')
+        url('../../assets/fonts-icons/icomoon.eot?nsxad1#iefix')
             format('embedded-opentype'),
-        url('../../assets/fonts-icons/icomoon.woff2?mlpfdl') format('woff2'),
-        url('../../assets/fonts-icons/icomoon.ttf?mlpfdl') format('truetype'),
-        url('../../assets/fonts-icons/icomoon.woff?mlpfdl') format('woff'),
-        url('../../assets/fonts-icons/icomoon.svg?mlpfdl#icomoon') format('svg');
+        url('../../assets/fonts-icons/icomoon.woff?nsxad1') format('woff2'),
+        url('../../assets/fonts-icons/icomoon.woff?nsxad1') format('woff'),
+        url('../../assets/fonts-icons/icomoon.ttf?nsxad1') format('truetype'),
+        url('../../assets/fonts-icons/icomoon.svg?nsxad1#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -28,46 +28,72 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-testimonials-star:before {
+.icon-travelpoint-rightnavigation .path1:before {
     content: '\e900';
+    color: rgb(93, 80, 198);
+}
+.icon-travelpoint-rightnavigation .path2:before {
+    content: '\e901';
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-travelpoint-leftnavigation .path1:before {
+    content: '\e902';
+    color: rgb(255, 255, 255);
+}
+.icon-travelpoint-leftnavigation .path2:before {
+    content: '\e903';
+    margin-left: -1em;
+    color: none;
+}
+.icon-travelpoint-leftnavigation .path3:before {
+    content: '\e904';
+    margin-left: -1em;
+    color: rgb(25, 24, 37);
+}
+.icon-testimonials-star:before {
+    content: '\e905';
     color: #facd49;
 }
 .icon-newsletter-message:before {
-    content: '\e901';
+    content: '\e906';
 }
 .icon-navbar-hamburger:before {
-    content: '\e902';
+    content: '\e907';
     color: #5d50c6;
 }
 .icon-hero-explore:before {
-    content: '\e903';
+    content: '\e908';
     color: #f85e9f;
 }
 .icon-footer-twitter .path1:before {
-    content: '\e904';
+    content: '\e909';
     color: rgb(93, 80, 198);
 }
 .icon-footer-twitter .path2:before {
-    content: '\e905';
+    content: '\e90a';
     margin-left: -1em;
     color: rgb(241, 242, 242);
 }
 .icon-footer-instagram .path1:before {
-    content: '\e906';
+    content: '\e90b';
     color: rgb(93, 80, 198);
 }
 .icon-footer-instagram .path2:before {
-    content: '\e907';
+    content: '\e90c';
     margin-left: -1em;
     color: rgb(255, 255, 255);
 }
 .icon-footer-facebook:before {
-    content: '\e908';
+    content: '\e90d';
     color: #5d50c6;
-}
-.icon-footer-dropdown:before {
-    content: '\e909';
 }
 .icon-cross:before {
     content: '\ea0f';
+}
+.icon-circle-up:before {
+    content: '\ea41';
+}
+.icon-circle-down:before {
+    content: '\ea43';
 }

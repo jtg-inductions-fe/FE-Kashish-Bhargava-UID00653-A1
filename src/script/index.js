@@ -8,7 +8,8 @@ window.addEventListener('load', () => {
 const sidebar = document.getElementById('sidebar');
 const hamburger = document.querySelector('.header__hamburger');
 const closeSidebar = document.getElementById('closeSidebar');
-
+const mainContent = document.getElementById('main-content');
+const header = document.querySelector('.header');
 const toggle = () => {
     if (!sidebar) return;
     sidebar.classList.toggle('active');
@@ -17,6 +18,17 @@ const toggle = () => {
     const open = sidebar.classList.contains('active');
     hamburger?.setAttribute('aria-expanded', String(open));
     sidebar?.setAttribute('aria-hidden', String(!open));
+    //Focus trapping functionality
+    if (open) {
+        mainContent?.setAttribute('inert', '');
+        header?.setAttribute('inert', '');
+        const firstFocusable = sidebar.querySelector('button:not([disabled])');
+        firstFocusable?.focus();
+    } else {
+        mainContent?.removeAttribute('inert');
+        header?.removeAttribute('inert');
+        hamburger?.focus();
+    }
 };
 
 if (hamburger) hamburger.addEventListener('click', toggle);
