@@ -1,11 +1,14 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 @use '../vendors/icomoon';
+
 .testimonial {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex(
+        $direction: column,
+        $justify: space-between,
+        $alignment: center,
+        $gap: 0
+    );
     margin-top: 3.2rem;
     //Tablet View
     @include mixins.breakpoints(variables.$tb) {
@@ -81,10 +84,12 @@
         .swiper-slide {
             height: 31.25rem;
             margin-top: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            @include mixins.flex(
+                $direction: column,
+                $justify: space-between,
+                $alignment: center,
+                $gap: 0
+            );
             .userprofile {
                 .img {
                     width: 100%;
@@ -117,10 +122,12 @@
             }
             .userstars {
                 margin-top: -2rem;
-                display: flex;
-                justify-content: space-between;
-                gap: 1.2rem;
-
+                @include mixins.flex(
+                    $direction: row,
+                    $justify: space-between,
+                    $alignment: stretch,
+                    $gap: 1.2rem
+                );
                 .icon-testimonials-star {
                     font-size: 1.8rem;
                 }
@@ -170,10 +177,12 @@
             }
         }
         .swiper-pagination-bullets {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
+            @include mixins.flex(
+                $direction: row,
+                $justify: center,
+                $alignment: center,
+                $gap: 1rem
+            );
         }
         .swiper-pagination-bullet {
             background-color: variables.$pagination-bullet-color;
@@ -191,9 +200,12 @@
             border-radius: 50%;
             background: variables.$default-background-color;
             box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include mixins.flex(
+                $direction: row,
+                $justify: center,
+                $alignment: center,
+                $gap: 0
+            );
             transition:
                 background 0.2s,
                 box-shadow 0.2s;
@@ -206,6 +218,9 @@
             &:focus-visible {
                 outline: 3px solid variables.$secondary-color;
                 outline-offset: 3px;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
             }
             //Tablet View
             @include mixins.breakpoints(variables.$tb) {
@@ -229,9 +244,12 @@
             border-radius: 50%;
             background: variables.$primary-color;
             box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include mixins.flex(
+                $direction: row,
+                $justify: center,
+                $alignment: center,
+                $gap: 0
+            );
             transition:
                 background 0.2s,
                 box-shadow 0.2s;
@@ -244,6 +262,9 @@
             &:focus-visible {
                 outline: 3px solid variables.$secondary-color;
                 outline-offset: 3px;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
             }
             //Tablet View
             @include mixins.breakpoints(variables.$tb) {
