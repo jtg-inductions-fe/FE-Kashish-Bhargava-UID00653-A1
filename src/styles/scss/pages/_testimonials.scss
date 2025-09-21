@@ -67,7 +67,7 @@
     }
     .swiper {
         width: 26.875rem;
-        height: 43.75rem;
+        height: 44.1rem;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             width: 57.7rem;
@@ -81,7 +81,7 @@
         }
         .swiper-slide {
             height: 31.25rem;
-            margin-top: 2.3rem;
+            margin-top: 4rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -158,7 +158,12 @@
             }
         }
         .swiper-pagination-horizontal {
-            margin-bottom: 7.8rem;
+            margin-bottom: 6.5rem;
+            //tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                margin-bottom: 7.8rem;
+            }
+
             //Desktop View
             @include mixins.breakpoints(variables.$db) {
                 margin-bottom: 7.9rem;
@@ -181,7 +186,7 @@
         }
         .swiper-button-prev {
             margin-left: 0.8rem;
-            margin-top: 16.5rem;
+            margin-top: 18rem;
             width: 4.0625rem;
             height: 4.0625rem;
             border-radius: 50%;
@@ -202,20 +207,20 @@
             //Tablet View
             @include mixins.breakpoints(variables.$tb) {
                 position: absolute;
-                top: 23.3rem;
+                top: 21.7rem;
                 width: 6.3rem;
                 height: 6.3rem;
                 right: 6rem;
             }
             //Desktop View
             @include mixins.breakpoints(variables.$db) {
-                top: 17.8rem;
+                top: 16.1rem;
                 left: 2rem;
             }
         }
         .swiper-button-next {
             margin-right: 0.6rem;
-            margin-top: 16.5rem;
+            margin-top: 18rem;
             width: 4.0625rem;
             height: 4.0625rem;
             border-radius: 50%;
@@ -236,14 +241,14 @@
             //Tablet View
             @include mixins.breakpoints(variables.$tb) {
                 position: absolute;
-                top: 23rem;
+                top: 21.6rem;
                 width: 6.4rem;
                 height: 6.4rem;
                 left: 50.5rem;
             }
             //Desktop View
             @include mixins.breakpoints(variables.$db) {
-                top: 17.7rem;
+                top: 16.1rem;
                 left: 71rem;
             }
         }
