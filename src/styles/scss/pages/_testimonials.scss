@@ -62,7 +62,7 @@
         @include mixins.breakpoints(variables.$db) {
             display: block;
             height: 0;
-            // margin-top: -27.5rem;
+            margin-top: -23rem;
         }
     }
     .swiper {
@@ -73,6 +73,11 @@
             width: 57.7rem;
             height: 72.2rem;
             position: relative;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            width: 79rem;
+            height: 66rem;
         }
         .swiper-slide {
             height: 31.25rem;
@@ -91,6 +96,11 @@
             //Tablet View
             @include mixins.breakpoints(variables.$tb) {
                 margin-top: 31rem;
+            }
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                margin-top: 26.9rem;
+                margin-left: 0.2rem;
             }
             .userinfo {
                 margin-top: 0.2rem;
@@ -137,10 +147,23 @@
                     left: 9.1rem;
                     right: 9.1rem;
                 }
+                //Desktop View
+                @include mixins.breakpoints(variables.$db) {
+                    font-size: 1.4375rem;
+                    line-height: 2.3rem;
+                    top: 21rem;
+                    left: 13.1rem;
+                    right: 13.1rem;
+                }
             }
         }
         .swiper-pagination-horizontal {
             margin-bottom: 7.8rem;
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                margin-bottom: 7.9rem;
+                margin-left: 0.3rem;
+            }
         }
         .swiper-pagination-bullets {
             display: flex;
@@ -184,6 +207,11 @@
                 height: 6.3rem;
                 right: 6rem;
             }
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                top: 17.8rem;
+                left: 2rem;
+            }
         }
         .swiper-button-next {
             margin-right: 0.6rem;
@@ -212,6 +240,11 @@
                 width: 6.4rem;
                 height: 6.4rem;
                 left: 50.5rem;
+            }
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                top: 17.7rem;
+                left: 71rem;
             }
         }
         .swiper-button-prev::before {
