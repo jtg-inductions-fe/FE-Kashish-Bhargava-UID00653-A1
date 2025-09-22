@@ -8,22 +8,38 @@
     width: 100%;
     margin: 0 auto;
     margin-top: 5.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex(
+        $direction: column,
+        $justify: space-between,
+        $alignment: center,
+        $gap: 0
+    );
     //Tablet View
     @include mixins.breakpoints(variables.$tb) {
         max-width: 64rem;
+        margin-top: 4.1rem;
     }
     //Desktop view
     @include mixins.breakpoints(variables.$db) {
         max-width: 90rem;
+        flex-direction: row;
+        margin-top: 6.5rem;
+    }
+    &__branding {
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            margin-top: 6rem;
+            margin-left: 4rem;
+        }
     }
     &__company {
         display: flex;
         margin-left: 1rem;
         gap: 1rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-left: 4rem;
+        }
     }
     &__cname {
         margin-top: 0.2rem;
@@ -34,13 +50,27 @@
     &__description {
         margin-left: 1rem;
         margin-top: 2rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.4375rem;
+            line-height: 2.3rem;
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            margin-right: 0;
+        }
     }
     &__socials {
         margin-top: 2rem;
         margin-left: 1rem;
-        display: flex;
-        flex-direction: row;
-        gap: 1.9rem;
+        @include mixins.flex(
+            $direction: row,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 1.9rem
+        );
         .icon-footer-facebook {
             font-size: 2.1rem;
         }
@@ -50,19 +80,65 @@
         .icon-footer-instagram {
             font-size: 2.1rem;
         }
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-top: 1.9rem;
+            margin-left: 4rem;
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            margin-top: 3.8rem;
+        }
     }
     &__sections {
         margin-top: 4.8rem;
-        display: flex;
-        flex-direction: column;
-        gap: 3.3rem;
+        @include mixins.flex(
+            $direction: column,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 3.3rem
+        );
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-top: 2.8rem;
+            margin-left: 3rem;
+            margin-right: 10rem;
+            @include mixins.flex(
+                $direction: row,
+                $justify: space-between,
+                $alignment: stretch,
+                $gap: 11.1rem
+            );
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            gap: 6.5rem;
+            margin-top: -3rem;
+            margin-right: 8.5rem;
+        }
     }
     &__links {
         display: none;
         max-height: 3rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            display: block;
+            @include mixins.flex(
+                $direction: column,
+                $justify: space-around,
+                $alignment: stretch,
+                $gap: 2rem
+            );
+            margin-top: 2rem;
+            padding-left: 0;
+        }
     }
     &__links li {
         list-style: none;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            padding-left: 0;
+        }
     }
     &__links a {
         font-size: 1rem;
@@ -77,6 +153,14 @@
             outline: 0.125rem solid variables.$primary-color;
             outline-offset: 0.125rem;
         }
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.125rem;
+            line-height: 1.8rem;
+            font-weight: 400;
+            margin-right: 0;
+            padding-left: 0;
+        }
     }
     &__title[aria-expanded='true'] + &__links {
         display: block;
@@ -85,19 +169,28 @@
         padding: 0;
         margin-top: 1.1rem;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 15.5rem;
+        @include mixins.flex(
+            $direction: row,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 15.5rem
+        );
         background: none;
         font-size: 1.5rem;
         border: none;
         font-family: variables.$font-primary;
         font-weight: 700;
         cursor: pointer;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+        }
         .icon-circle-down {
             font-size: 1.4rem;
             margin-top: -0.4rem;
+            //Tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                display: none;
+            }
         }
     }
     .icon-circle-down {
