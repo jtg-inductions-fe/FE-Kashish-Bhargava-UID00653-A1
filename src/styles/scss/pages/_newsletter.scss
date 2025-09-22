@@ -109,7 +109,7 @@
             height: 6rem;
             border-radius: 1.7rem;
             padding-left: 0rem;
-            padding-right: 6rem;
+            padding-right: 0rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
@@ -117,7 +117,7 @@
             margin-left: 1rem;
             margin-right: 1rem;
             border-radius: 1.9rem;
-            padding-right: 15rem;
+            padding-right: 0.5rem;
         }
     }
     &__icon {
@@ -131,12 +131,12 @@
             font-size: 2.2rem;
             padding-left: 0rem;
             margin-top: 0.3rem;
-            margin-left: 4rem;
+            margin-left: 0.5rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
             font-size: 2.1rem;
-            padding-left: 6.5rem;
+            padding-left: 0rem;
         }
     }
     .emailid {
@@ -144,9 +144,15 @@
         padding-right: 1rem;
         padding-bottom: 1rem;
         margin-right: 8.5rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-right: 0;
+            padding-right: 3rem;
+        }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
-            padding-right: 15rem;
+            padding-right: 0rem;
+            margin-right: 0rem;
         }
     }
     input[type='email']::placeholder {
@@ -161,6 +167,15 @@
     }
     input[type='email'] {
         border: none;
+        outline: none;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            width: 25rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            width: 41rem;
+        }
     }
 
     &__btn {
