@@ -635,16 +635,23 @@
                             aria-label="Newsletter Signup"
                         >
                             <div class="newsletter__email">
-                                <div class="newsletter__icon">
-                                    <i class="icon-newsletter-message"></i>
+                                <div
+                                    class="newsletter__icon"
+                                    aria-hidden="true"
+                                >
+                                    <i
+                                        class="icon-newsletter-message"
+                                        aria-hidden="true"
+                                    ></i>
                                 </div>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
-                                    class="emailid"
+                                    class="newsletter__emailid"
                                     placeholder="Your Email"
-                                    aria-required="true"
+                                    autocomplete="email"
+                                    aria-label="Email address"
                                     required
                                 />
                             </div>

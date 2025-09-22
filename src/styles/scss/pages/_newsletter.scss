@@ -102,6 +102,9 @@
             $alignment: center,
             $gap: 1rem
         );
+        &:focus-within {
+            box-shadow: 0 0 0 3px rgba(93, 80, 198, 0.35);
+        }
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             background-color: variables.$default-background-color;
@@ -139,7 +142,7 @@
             padding-left: 0rem;
         }
     }
-    .emailid {
+    &__emailid {
         padding-top: 1rem;
         padding-right: 1rem;
         padding-bottom: 1rem;
