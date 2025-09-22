@@ -46,10 +46,19 @@ document.addEventListener('keydown', (e) => {
 });
 
 //Accordion functionality
-const titles = document.querySelectorAll('.footer__title');
-titles.forEach((title) => {
-    title.addEventListener('click', () => {
-        const expanded = title.getAttribute('aria-expanded') === true;
-        title.setAttribute('aria-expanded', !expanded);
+// const titles = document.querySelectorAll('.footer__title');
+// titles.forEach((title) => {
+//     title.addEventListener('click', () => {
+//         const expanded = title.getAttribute('aria-expanded') === true;
+//         title.setAttribute('aria-expanded', !expanded);
+//     });
+// });
+
+document.querySelectorAll('.footer__section').forEach((section) => {
+    const button = section.querySelector('.footer__title');
+    button.addEventListener('click', () => {
+        const isExpanded = section.getAttribute('aria-expanded') === 'true';
+        section.setAttribute('aria-expanded', !isExpanded);
+        button.setAttribute('aria-expanded', !isExpanded);
     });
 });

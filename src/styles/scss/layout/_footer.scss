@@ -59,6 +59,24 @@
     }
     &__links {
         display: none;
+        max-height: 3rem;
+    }
+    &__links li {
+        list-style: none;
+    }
+    &__links a {
+        font-size: 1rem;
+        font-weight: 700;
+        color: variables.$secondary-text-color;
+        font-family: variables.$font-primary;
+        text-decoration: none;
+        &:hover {
+            color: variables.$primary-text-color;
+        }
+        &:focus-visible {
+            outline: 0.125rem solid variables.$primary-color;
+            outline-offset: 0.125rem;
+        }
     }
     &__title[aria-expanded='true'] + &__links {
         display: block;
@@ -73,6 +91,9 @@
         gap: 15.5rem;
         background: none;
         font-size: 1.5rem;
+        border: none;
+        font-family: variables.$font-primary;
+        font-weight: 700;
         cursor: pointer;
         .icon-circle-down {
             font-size: 1.4rem;
@@ -80,9 +101,9 @@
         }
     }
     .icon-circle-down {
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease;
     }
     &__title[aria-expanded='true'] .icon-circle-down {
-        transform: rotate(180 deg);
+        transform: rotate(180deg);
     }
 }
