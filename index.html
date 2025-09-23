@@ -261,7 +261,9 @@
                         </picture>
                     </div>
                     <div class="travelpoint__content">
-                        <h4 class="travelpoint__title">TRAVEL POINT</h4>
+                        <h4 id="travelpoint__title" class="travelpoint__title">
+                            TRAVEL POINT
+                        </h4>
                         <h1 class="travelpoint__heading">
                             We helping you find your dream location
                         </h1>
@@ -271,23 +273,23 @@
                             classical Latin literature from 45 BC.
                         </p>
                         <div class="travelpoint__cards">
-                            <div class="travelpoint__card">
+                            <div class="travelpoint__card" tabindex="0">
                                 <h2 class="travelpoint__stats">500+</h2>
                                 <p class="travelpoint__service">
                                     Holiday Package
                                 </p>
                             </div>
-                            <div class="travelpoint__card">
+                            <div class="travelpoint__card" tabindex="0">
                                 <h2 class="travelpoint__stats">100</h2>
                                 <p class="travelpoint__service">Luxury Hotel</p>
                             </div>
-                            <div class="travelpoint__card">
+                            <div class="travelpoint__card" tabindex="0">
                                 <h2 class="travelpoint__stats">7</h2>
                                 <p class="travelpoint__service">
                                     Premium Airlines
                                 </p>
                             </div>
-                            <div class="travelpoint__card">
+                            <div class="travelpoint__card" tabindex="0">
                                 <h2 class="travelpoint__stats">2k+</h2>
                                 <p class="travelpoint__service">
                                     Happy Customer
@@ -301,6 +303,101 @@
                             alt=""
                             aria-hidden="true"
                         />
+                    </div>
+                </section>
+                <section class="features" aria-labelledby="features-title">
+                    <div class="features__image">
+                        <picture>
+                            <source
+                                media="(min-width: 1440px)"
+                                srcset="
+                                    src/assets/images/feature/feature-image-desktop.png
+                                "
+                            />
+                            <source
+                                media="(min-width: 1024px)"
+                                srcset="
+                                    src/assets/images/feature/feature-image-tablet.png
+                                "
+                            />
+                            <source
+                                media="(min-width: 430px)"
+                                srcset="
+                                    src/assets/images/feature/feature-image-mobile.png
+                                "
+                            />
+                            <img
+                                aria-hidden="true"
+                                src="src/assets/images/feature/feature-image-mobile.png"
+                                alt="Features"
+                            />
+                        </picture>
+                    </div>
+                    <div class="features__content">
+                        <h4 id="features-title" class="features__title">
+                            KEY FEATURES
+                        </h4>
+                        <h2 class="features__heading">
+                            We offer best services
+                        </h2>
+                        <p class="features__para">
+                            Contrary to popular belief, Lorem Ipsum is not
+                            simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC.
+                        </p>
+                        <div class="features__cards">
+                            <div class="features__card" tabindex="0">
+                                <div class="features__icon">
+                                    <img
+                                        src="src/assets/images/feature/feature1.png"
+                                        alt="location"
+                                        aria-hidden="true"
+                                    />
+                                </div>
+                                <div class="features__description">
+                                    <h6 class="features__subheading">
+                                        We offer best services
+                                    </h6>
+                                    <p class="features__subpara">
+                                        Lorem Ipsum is not simply random text
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="features__card" tabindex="0">
+                                <div class="features__icon">
+                                    <img
+                                        src="src/assets/images/feature/feature2.png"
+                                        alt="calender"
+                                        aria-hidden="true"
+                                    />
+                                </div>
+                                <div class="features__description">
+                                    <h6 class="features__subheading">
+                                        Schedule your trip
+                                    </h6>
+                                    <p class="features__subpara">
+                                        It has roots in a piece of classical
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="features__card" tabindex="0">
+                                <div class="features__icon">
+                                    <img
+                                        src="src/assets/images/feature/feature3.png"
+                                        alt="coupons"
+                                        aria-hidden="true"
+                                    />
+                                </div>
+                                <div class="features__description">
+                                    <h6 class="features__subheading">
+                                        Get discounted coupons
+                                    </h6>
+                                    <p class="features__subpara">
+                                        Lorem Ipsum is not simply random text
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
