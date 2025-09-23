@@ -133,7 +133,10 @@
     &__links {
         max-height: 0rem;
         overflow: hidden;
-        transition: max-height 0.4s ease;
+        transition:
+            max-height 0.4s ease,
+            visibility 0s linear 0.4s;
+        visibility: hidden;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             display: block;
@@ -146,10 +149,12 @@
             );
             margin-top: 1.5rem;
             padding-left: 0;
+            visibility: visible;
         }
         //Desktop view
         @include mixins.breakpoints(variables.$db) {
             margin-top: 1.6rem;
+            visibility: visible;
         }
     }
     &__links li {
@@ -188,6 +193,7 @@
         }
     }
     #footer__links--desktop {
+        display: none;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             display: none;
@@ -199,6 +205,8 @@
     }
     &__section[aria-expanded='true'] .footer__links {
         max-height: 31.25rem;
+        visibility: visible;
+        transition: max-height 0.4s ease;
     }
     &__title {
         padding: 0;
