@@ -1,0 +1,204 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../components/buttons';
+
+//Mobile Section
+.newsletter {
+    margin-top: 4.3rem;
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        margin-top: -1rem;
+    }
+    //Desktop View
+    @include mixins.breakpoints(variables.$db) {
+        margin-top: 2.5rem;
+    }
+    &__content {
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 2rem
+        );
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            background-color: variables.$secondary-background-color;
+            margin-left: 3.8rem;
+            margin-right: 3.8rem;
+            height: 35.5rem;
+            padding-top: 8rem;
+            padding-bottom: 9rem;
+            border-radius: 2rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            height: 37.5rem;
+            margin-left: 7.6rem;
+            margin-right: 7.6rem;
+        }
+    }
+    &__title {
+        margin-left: 3.1rem;
+        margin-right: 3.1rem;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.2rem;
+        color: variables.$secondary-color;
+        font-weight: 700;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.4375rem;
+            line-height: 1.725rem;
+            letter-spacing: 0.2875rem;
+            margin-bottom: 0;
+        }
+    }
+    &__heading {
+        margin-left: 3.1rem;
+        margin-right: 3.1rem;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        font-weight: 700;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            font-size: 3.4375rem;
+            line-height: 4.125rem;
+        }
+    }
+    &__form {
+        margin-top: 2rem;
+        @include mixins.flex(
+            $direction: column,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 1.7rem
+        );
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            flex-direction: row;
+            gap: 2rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            gap: 3rem;
+        }
+    }
+    &__email {
+        width: 20.875rem;
+        height: 4.5rem;
+        border-radius: 1rem;
+        padding-left: 9.5rem;
+        padding-right: 2.4rem;
+        @include mixins.flex(
+            $direction: row,
+            $justify: center,
+            $alignment: center,
+            $gap: 1rem
+        );
+        &:focus-within {
+            box-shadow: 0 0 0 3px rgba(93, 80, 198, 0.35);
+        }
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            background-color: variables.$default-background-color;
+            width: 31.3rem;
+            height: 6rem;
+            border-radius: 1.7rem;
+            padding-left: 0rem;
+            padding-right: 0rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            width: 48rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: 1.9rem;
+            padding-right: 0.5rem;
+        }
+    }
+    &__icon {
+        font-size: 1.5rem;
+        margin-right: 0rem;
+        padding: 0;
+        padding-right: 0rem;
+        padding-left: 1rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 2.2rem;
+            padding-left: 0rem;
+            margin-top: 0.3rem;
+            margin-left: 0.5rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            font-size: 2.1rem;
+            padding-left: 0rem;
+        }
+    }
+    &__emailid {
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        margin-right: 8.5rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-right: 0;
+            padding-right: 3rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            padding-right: 0rem;
+            margin-right: 0rem;
+        }
+    }
+    input[type='email']::placeholder {
+        color: variables.$secondary-text-color;
+        font-size: 0.875rem;
+        line-height: 1.05rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.4375rem;
+            line-height: 1.725rem;
+        }
+    }
+    input[type='email'] {
+        border: none;
+        outline: none;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            width: 25rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            width: 41rem;
+        }
+    }
+
+    &__btn {
+        width: 20.875rem;
+        height: 4.5rem;
+        @include mixins.button(
+            $fontsize: 1rem,
+            $paddings: 0.6rem 1rem 0.8rem 1.2rem,
+            $backgroundcolor: variables.$primary-color,
+            $textcolor: variables.$default-background-color
+        );
+        border-radius: 1rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            width: 14.7rem;
+            height: 6rem;
+            border-radius: 2rem;
+            font-size: 1.4375rem;
+            line-height: 1.725rem;
+            padding: 0;
+        }
+    }
+}
