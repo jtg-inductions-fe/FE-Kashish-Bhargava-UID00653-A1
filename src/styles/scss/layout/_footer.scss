@@ -139,6 +139,7 @@
         visibility: hidden;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
+            overflow: visible;
             display: block;
             max-height: 31.25rem;
             @include mixins.flex(
@@ -153,6 +154,7 @@
         }
         //Desktop view
         @include mixins.breakpoints(variables.$db) {
+            overflow: visible;
             margin-top: 1.6rem;
             visibility: visible;
         }
