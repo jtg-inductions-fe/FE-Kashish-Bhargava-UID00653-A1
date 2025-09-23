@@ -3,6 +3,8 @@ import '../styles/scss/main.scss';
 window.addEventListener('load', () => {
     document.body.classList.remove('preload');
 });
+import { initialzeSwipper } from './carousel.js';
+initialzeSwipper();
 
 //sidebar functionality
 const sidebar = document.getElementById('sidebar');

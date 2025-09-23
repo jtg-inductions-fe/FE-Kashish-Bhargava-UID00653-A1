@@ -1,0 +1,309 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../vendors/icomoon';
+
+.testimonial {
+    @include mixins.flex(
+        $direction: column,
+        $justify: space-between,
+        $alignment: center,
+        $gap: 0
+    );
+    margin-top: 3.2rem;
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        margin-top: 6.3rem;
+    }
+    //Desktop View
+    @include mixins.breakpoints(variables.$db) {
+        margin-top: -33rem;
+    }
+    &__title {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.2rem;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        color: variables.$secondary-color;
+        margin-left: 0.4rem;
+        margin-bottom: 0;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.4375rem;
+            line-height: 1.725rem;
+            letter-spacing: 0.2875rem;
+        }
+    }
+    &__heading {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        font-weight: 700;
+        margin-top: 0.9rem;
+        margin-bottom: 0;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 2.5rem;
+            line-height: 3rem;
+            margin-top: 1.1rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            font-size: 2.75rem;
+        }
+    }
+    &__image {
+        display: none;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            display: block;
+            height: 0;
+            margin-top: -27.5rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            display: block;
+            height: 0;
+            margin-top: -23rem;
+        }
+    }
+    .swiper {
+        width: 26.875rem;
+        height: 44.1rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            width: 57.7rem;
+            height: 72.2rem;
+            position: relative;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            width: 79rem;
+            height: 66rem;
+        }
+        .swiper-slide {
+            height: 31.25rem;
+            margin-top: 4rem;
+            @include mixins.flex(
+                $direction: column,
+                $justify: space-between,
+                $alignment: center,
+                $gap: 0
+            );
+            .userprofile {
+                .img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+            //Tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                margin-top: 31rem;
+            }
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                margin-top: 26.9rem;
+                margin-left: 0.2rem;
+            }
+            .userinfo {
+                margin-top: 0.2rem;
+                font-size: 1.4rem;
+                &__name {
+                    color: variables.$primary-background-color;
+                    font-size: 1.75rem;
+                }
+                margin-bottom: 0;
+                //Tablet View
+                @include mixins.breakpoints(variables.$tb) {
+                    position: absolute;
+                    top: 11rem;
+                }
+            }
+            .userstars {
+                margin-top: -2rem;
+                @include mixins.flex(
+                    $direction: row,
+                    $justify: space-between,
+                    $alignment: stretch,
+                    $gap: 1.2rem
+                );
+                .icon-testimonials-star {
+                    font-size: 1.8rem;
+                }
+                //Tablet View
+                @include mixins.breakpoints(variables.$tb) {
+                    position: absolute;
+                    top: 17.5rem;
+                }
+            }
+            .userbio {
+                text-align: center;
+                font-size: 1.125rem;
+                line-height: 1.8rem;
+                margin-bottom: 3.7rem;
+                margin-left: 1.3rem;
+                margin-right: 1.3rem;
+                //Tablet View
+                @include mixins.breakpoints(variables.$tb) {
+                    font-size: 1.4375rem;
+                    line-height: 2.3rem;
+                    position: absolute;
+                    top: 21rem;
+                    left: 9.1rem;
+                    right: 9.1rem;
+                }
+                //Desktop View
+                @include mixins.breakpoints(variables.$db) {
+                    font-size: 1.4375rem;
+                    line-height: 2.3rem;
+                    top: 21rem;
+                    left: 13.1rem;
+                    right: 13.1rem;
+                }
+            }
+        }
+        .swiper-pagination-horizontal {
+            margin-bottom: 6.5rem;
+            //tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                margin-bottom: 7.8rem;
+            }
+
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                margin-bottom: 7.9rem;
+                margin-left: 0.3rem;
+            }
+        }
+        .swiper-pagination-bullets {
+            @include mixins.flex(
+                $direction: row,
+                $justify: center,
+                $alignment: center,
+                $gap: 1rem
+            );
+        }
+        .swiper-pagination-bullet {
+            background-color: variables.$pagination-bullet-color;
+            width: 1.5rem;
+            height: 1.5rem;
+            &-active {
+                background-color: variables.$secondary-color;
+            }
+        }
+        .swiper-button-prev {
+            margin-left: 0.8rem;
+            margin-top: 18rem;
+            width: 4.0625rem;
+            height: 4.0625rem;
+            border-radius: 50%;
+            background: variables.$default-background-color;
+            box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+            @include mixins.flex(
+                $direction: row,
+                $justify: center,
+                $alignment: center,
+                $gap: 0
+            );
+            transition:
+                background 0.2s,
+                box-shadow 0.2s;
+            cursor: pointer;
+            border: 0.09375rem solid variables.$carousel-button-border;
+            &:hover {
+                background: variables.$dark-default-background-color;
+                box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+            }
+            &:focus-visible {
+                outline: 3px solid variables.$secondary-color;
+                outline-offset: 3px;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
+            //Tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                position: absolute;
+                top: 21.7rem;
+                width: 6.3rem;
+                height: 6.3rem;
+                right: 6rem;
+            }
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                top: 16.1rem;
+                left: 2rem;
+            }
+        }
+        .swiper-button-next {
+            margin-right: 0.6rem;
+            margin-top: 18rem;
+            width: 4.0625rem;
+            height: 4.0625rem;
+            border-radius: 50%;
+            background: variables.$primary-color;
+            box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+            @include mixins.flex(
+                $direction: row,
+                $justify: center,
+                $alignment: center,
+                $gap: 0
+            );
+            transition:
+                background 0.2s,
+                box-shadow 0.2s;
+            cursor: pointer;
+            border: 0.09375rem solid variables.$default-background-color;
+            &:hover {
+                background: variables.$dark-primary-color;
+                box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+            }
+            &:focus-visible {
+                outline: 3px solid variables.$secondary-color;
+                outline-offset: 3px;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
+            //Tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                position: absolute;
+                top: 21.6rem;
+                width: 6.4rem;
+                height: 6.4rem;
+                left: 50.5rem;
+            }
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                top: 16.1rem;
+                left: 71rem;
+            }
+        }
+        .swiper-button-prev::before {
+            font-family: 'icomoon';
+            content: '\e902';
+            content: '\e903';
+            content: '\e904';
+            color: variables.$primary-text-color;
+            font-size: 4rem;
+            margin-left: 0rem;
+            //Tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                font-size: 6rem;
+            }
+        }
+        .swiper-button-next::before {
+            font-family: 'icomoon';
+            content: '\e900';
+            content: '\e901';
+            color: variables.$default-background-color;
+            margin-right: 0rem;
+            font-size: 4rem;
+            //Tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                font-size: 6rem;
+            }
+        }
+    }
+}
