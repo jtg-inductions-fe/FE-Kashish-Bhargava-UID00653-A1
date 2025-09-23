@@ -44,3 +44,12 @@ document
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && sidebar?.classList.contains('active')) toggle();
 });
+
+//Accordion Functionality
+document.querySelectorAll('.footer__toggle').forEach((toggle) => {
+    const section = toggle.closest('.footer__section');
+    toggle.addEventListener('click', () => {
+        const isExpanded = section.getAttribute('aria-expanded') === 'true';
+        section.setAttribute('aria-expanded', !isExpanded);
+    });
+});

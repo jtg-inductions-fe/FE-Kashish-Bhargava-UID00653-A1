@@ -1,0 +1,273 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../components/buttons';
+
+.footer {
+    //Mobile view
+    max-width: 26.875rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5.7rem;
+    @include mixins.flex(
+        $direction: column,
+        $justify: space-between,
+        $alignment: center,
+        $gap: 0
+    );
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        max-width: 64rem;
+        margin-top: 4.1rem;
+    }
+    //Desktop view
+    @include mixins.breakpoints(variables.$db) {
+        max-width: 90rem;
+        flex-direction: row;
+        margin-top: 6.5rem;
+    }
+    &__branding {
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            margin-top: 3.8rem;
+            margin-left: 4rem;
+        }
+    }
+    &__company {
+        display: flex;
+        margin-left: 1rem;
+        gap: 1rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-left: 4rem;
+        }
+    }
+    &__cname {
+        margin-top: 0.2rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        font-weight: 900;
+    }
+    &__description {
+        margin-left: 1rem;
+        margin-top: 2rem;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.4375rem;
+            line-height: 2.3rem;
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            margin-right: 0;
+        }
+    }
+    &__socials {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        @include mixins.flex(
+            $direction: row,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 1.9rem
+        );
+        a {
+            text-decoration: none;
+        }
+        .icon-footer-facebook {
+            font-size: 2.1rem;
+        }
+        .icon-footer-twitter {
+            font-size: 2.1rem;
+        }
+        .icon-footer-instagram {
+            font-size: 2.1rem;
+        }
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-top: 1.9rem;
+            margin-left: 4rem;
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            margin-top: 3.8rem;
+        }
+    }
+    &__sections {
+        margin-top: 4rem;
+        @include mixins.flex(
+            $direction: column,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 0.7rem
+        );
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            margin-top: 2.2rem;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            @include mixins.flex(
+                $direction: row,
+                $justify: space-between,
+                $alignment: stretch,
+                $gap: 2rem
+            );
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            gap: 2rem;
+            margin-top: 4.6rem;
+            margin-right: 7.4rem;
+        }
+    }
+    &__section {
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            width: 17.354375rem;
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            width: 10.423125rem;
+        }
+    }
+    &__links {
+        max-height: 0rem;
+        overflow: hidden;
+        transition:
+            max-height 0.4s ease,
+            visibility 0s linear 0.4s;
+        visibility: hidden;
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            overflow: visible;
+            display: block;
+            max-height: 31.25rem;
+            @include mixins.flex(
+                $direction: column,
+                $justify: space-around,
+                $alignment: stretch,
+                $gap: 2rem
+            );
+            margin-top: 1.5rem;
+            padding-left: 0;
+            visibility: visible;
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            overflow: visible;
+            margin-top: 1.6rem;
+            visibility: visible;
+        }
+    }
+    &__links li {
+        list-style: none;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            padding-left: 0;
+        }
+    }
+    &__links a {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: variables.$secondary-text-color;
+        font-family: variables.$font-primary;
+        text-decoration: none;
+        &:hover {
+            color: variables.$primary-text-color;
+        }
+        &:focus-visible {
+            outline: 0.125rem solid variables.$primary-color;
+            outline-offset: 0.125rem;
+        }
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            font-size: 1.125rem;
+            line-height: 1.9rem;
+            font-weight: 400;
+            margin-right: 0;
+            padding-left: 0;
+        }
+    }
+    #footer__links--tablet {
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            display: none;
+        }
+    }
+    #footer__links--desktop {
+        display: none;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            display: none;
+        }
+        //Desktop view
+        @include mixins.breakpoints(variables.$db) {
+            display: flex;
+        }
+    }
+    &__section[aria-expanded='true'] .footer__links {
+        max-height: 31.25rem;
+        visibility: visible;
+        transition: max-height 0.4s ease;
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+    }
+    &__title {
+        padding: 0;
+        margin-top: 1.1rem;
+        width: 100%;
+        @include mixins.flex(
+            $direction: row,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 15.5rem
+        );
+        font-size: 1.5rem;
+        font-family: variables.$font-primary;
+        font-weight: 700;
+    }
+    &__headings--mobile {
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            display: none;
+        }
+    }
+    &__headings--desktop {
+        display: none;
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            display: block;
+        }
+    }
+    .footer__toggle {
+        display: inline-flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        &:focus-visible {
+            outline: 0.2rem solid variables.$primary-color;
+            outline-offset: 0.2rem;
+            border-radius: 1rem;
+        }
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            display: none;
+        }
+    }
+    .icon-circle-down {
+        font-size: 1.4rem;
+        margin-top: -0.4rem;
+        transition: transform 0.5s ease;
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+    }
+    &__section[aria-expanded='true'] .icon-circle-down {
+        transform: rotate(180deg);
+    }
+}
