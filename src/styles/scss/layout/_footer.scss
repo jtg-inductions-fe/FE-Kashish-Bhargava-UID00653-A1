@@ -240,7 +240,7 @@
         display: none;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
-            display: inline;
+            display: block;
         }
     }
     .footer__toggle {
