@@ -669,12 +669,14 @@
             <footer class="footer" aria-label="Site footer">
                 <div class="footer__branding">
                     <div class="footer__company">
-                        <div class="footer__logo">
+                        <a href="#" class="footer__logo">
                             <img
+                                loading="lazy"
+                                decoding="async"
                                 src="src/assets/images/navbar/travlog-logo.png"
                                 alt="Travlog"
                             />
-                        </div>
+                        </a>
                         <span class="footer__cname">Travlog</span>
                     </div>
                     <p class="footer__description">
@@ -683,48 +685,73 @@
                         literature from 45 BC.
                     </p>
                     <div class="footer__socials">
-                        <i class="icon-footer-facebook"></i>
-                        <span class="icon-footer-twitter"
-                            ><span class="path1"></span
-                            ><span class="path2"></span
-                        ></span>
-                        <span class="icon-footer-instagram"
-                            ><span class="path1"></span
-                            ><span class="path2"></span
-                        ></span>
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                            class="footer__social"
+                        >
+                            <i
+                                class="icon-footer-facebook"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="footer__social">
+                            <span
+                                class="icon-footer-twitter"
+                                aria-hidden="true"
+                            >
+                                <span class="path1"></span
+                                ><span class="path2"></span>
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                            class="footer__social"
+                        >
+                            <span
+                                class="icon-footer-instagram"
+                                aria-hidden="true"
+                            >
+                                <span class="path1"></span
+                                ><span class="path2"></span>
+                            </span>
+                        </a>
                     </div>
                 </div>
                 <div class="footer__sections">
-                    <div
-                        class="footer__section"
-                        aria-label="Footer Navigations"
-                    >
-                        <button
-                            type="button"
-                            class="footer__title"
-                            aria-expanded="false"
-                        >
+                    <div class="footer__section" aria-expanded="false">
+                        <div class="footer__title">
                             <span class="footer__headings">Company</span
-                            ><i class="icon-circle-down"></i>
-                        </button>
+                            ><button
+                                type="button"
+                                class="footer__toggle"
+                                aria-label="Toggle Company links"
+                            >
+                                <i class="icon-circle-down"></i>
+                            </button>
+                        </div>
                         <ul class="footer__links">
                             <li><a href="#">About</a></li>
                             <li><a href="#">Career</a></li>
                             <li><a href="#">Mobile</a></li>
                         </ul>
                     </div>
-                    <div
-                        class="footer__section"
-                        aria-label="Footer Navigations"
-                    >
-                        <button
-                            type="button"
-                            class="footer__title"
-                            aria-expanded="false"
-                        >
-                            <span>Contact Us</span
-                            ><i class="icon-circle-down"></i>
-                        </button>
+                    <div class="footer__section" aria-expanded="false">
+                        <div class="footer__title">
+                            <span class="footer__headings--mobile"
+                                >Contact Us</span
+                            >
+                            <span class="footer__headings--desktop"
+                                >Contact</span
+                            ><button
+                                type="button"
+                                class="footer__toggle"
+                                aria-label="Toggle Contact Us links"
+                            >
+                                <i class="icon-circle-down"></i>
+                            </button>
+                        </div>
                         <ul class="footer__links">
                             <li><a href="#">Why Travlog?</a></li>
                             <li><a href="#">Partner with us</a></li>
@@ -732,18 +759,18 @@
                             <li><a href="#">Blog</a></li>
                         </ul>
                     </div>
-                    <div
-                        class="footer__section"
-                        aria-label="Footer Navigations"
-                    >
-                        <button
-                            type="button"
-                            class="footer__title"
-                            aria-expanded="false"
-                        >
-                            <span>Meet Us</span><i class="icon-circle-down"></i>
-                        </button>
-                        <ul class="footer__links">
+                    <div class="footer__section" aria-expanded="false">
+                        <div class="footer__title">
+                            <span class="footer__headings">Meet Us</span
+                            ><button
+                                type="button"
+                                class="footer__toggle"
+                                aria-label="Toggle Meet Us links"
+                            >
+                                <i class="icon-circle-down"></i>
+                            </button>
+                        </div>
+                        <ul class="footer__links" id="footer__links--tablet">
                             <li>
                                 <a
                                     href="#"
@@ -763,6 +790,32 @@
                                     href="#"
                                     aria-label="Visit us at 205. R Street, New York BD23200"
                                     >205. R Street, New York <br />
+                                    BD23200</a
+                                >
+                            </li>
+                        </ul>
+                        <ul class="footer__links" id="footer__links--desktop">
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-label="Call us at +00 92 1234 56789"
+                                    >+00 92 1234 <br />
+                                    56789</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-label="Email us at info@travlog.com"
+                                    >info@travlog.com</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-label="Visit us at 205. R Street, New York BD23200"
+                                    >205. R Street, New <br />
+                                    York <br />
                                     BD23200</a
                                 >
                             </li>

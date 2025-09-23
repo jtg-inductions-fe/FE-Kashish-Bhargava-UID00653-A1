@@ -45,20 +45,11 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && sidebar?.classList.contains('active')) toggle();
 });
 
-//Accordion functionality
-// const titles = document.querySelectorAll('.footer__title');
-// titles.forEach((title) => {
-//     title.addEventListener('click', () => {
-//         const expanded = title.getAttribute('aria-expanded') === true;
-//         title.setAttribute('aria-expanded', !expanded);
-//     });
-// });
-
-document.querySelectorAll('.footer__section').forEach((section) => {
-    const button = section.querySelector('.footer__title');
-    button.addEventListener('click', () => {
+//Accordion Functionality
+document.querySelectorAll('.footer__toggle').forEach((toggle) => {
+    const section = toggle.closest('.footer__section');
+    toggle.addEventListener('click', () => {
         const isExpanded = section.getAttribute('aria-expanded') === 'true';
         section.setAttribute('aria-expanded', !isExpanded);
-        button.setAttribute('aria-expanded', !isExpanded);
     });
 });
