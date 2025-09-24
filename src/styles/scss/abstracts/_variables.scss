@@ -4,13 +4,15 @@ $primary-color: #5d50c6 !default;
 $secondary-color: #f85e9f !default;
 $primary-background-color: #ff5722 !default;
 $secondary-background-color: #fffbf1 !default;
-$primary-text-color: #3a2d2f !default;
-$secondary-text-color: #5c595a !default;
+$primary-text-color: #1f0b04 !default;
+$secondary-text-color: #191825 !default;
+$tertiary-text-color: #92888b !default;
 $sidebar-background-color: #fcb8d0 !default;
 $primary-gradient-color: #ffd9cd !default;
 $button-border-color: #efebea !default;
-
 $cards-shadow-color: #f2eff0 !default;
+$primary-gradient-start-mobile: 15%;
+$primary-gradient-end-mobile: 77%;
 $primary-gradient-start: 30%;
 $primary-gradient-end: 70%;
 $pagination-bullet-color: #1918254d !default;
@@ -20,29 +22,6 @@ $carousel-button-border: #eee !default;
 
 //font-family
 $font-primary: 'Roboto', sans-serif;
-
-//8-pt system (spacing)
-// As a map for scale-based usage
-$space: (
-    0: 0,
-    1: 0.25rem,
-    2: 0.5rem,
-    3: 0.75rem,
-    4: 1rem,
-    5: 1.5rem,
-    6: 2rem,
-    7: 3rem,
-    8: 4rem,
-);
-$space-0: 0;
-$space-1: 0.25rem;
-$space-2: 0.5rem;
-$space-3: 0.75rem;
-$space-4: 1rem;
-$space-5: 1.5rem;
-$space-6: 2rem;
-$space-7: 3rem;
-$space-8: 4rem;
 
 // breakpoints
 $mb: 28.75rem !default; //Mobile breakpoint
