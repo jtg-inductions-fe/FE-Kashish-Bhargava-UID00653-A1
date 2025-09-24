@@ -18,15 +18,40 @@
         position: absolute;
         background: radial-gradient(
             circle,
-            variables.$primary-gradient-color variables.$primary-gradient-start,
-            variables.$default-background-color variables.$primary-gradient-end
+            variables.$primary-gradient-color
+                variables.$primary-gradient-start-mobile,
+            variables.$default-background-color
+                variables.$primary-gradient-end-mobile
         );
         border-radius: 50%;
-        width: 80vw;
-        height: 80vw;
+        width: 120vw;
+        height: 110vw;
         z-index: -2;
-        top: -20vw;
-        left: -20vw;
+        top: -22vw;
+        left: -27vw;
+    }
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: radial-gradient(
+                circle,
+                variables.$primary-gradient-color
+                    variables.$primary-gradient-start,
+                variables.$default-background-color
+                    variables.$primary-gradient-end
+            );
+            border-radius: 50%;
+            width: 80vw;
+            height: 80vw;
+            z-index: -2;
+            top: -20vw;
+            left: -20vw;
+        }
     }
 }
 .header {
@@ -139,7 +164,7 @@
             font-size: 1.9rem;
             font-weight: 700;
             line-height: 4.5rem;
-            color: variables.$secondary-text-color;
+            color: variables.$tertiary-text-color;
             font-family: variables.$font-primary;
             transition: color 0.2s;
 
@@ -163,7 +188,7 @@
         width: 100%;
         max-width: 12.5rem;
 
-        .btn--login {
+        .buttons--login {
             @include mixins.button(
                 $fontsize: 1.3rem,
                 $paddings: 0.8rem 1.2rem 0.8rem 1.2rem,
@@ -172,7 +197,7 @@
             );
         }
 
-        .btn--signup {
+        .buttons--signup {
             @include mixins.button(
                 $fontsize: 1.3rem,
                 $paddings: 0.8rem 1.2rem 0.8rem 1.2rem,
@@ -221,7 +246,7 @@
         margin-right: 2.6rem;
         margin-top: 1rem;
 
-        .btn--login {
+        .buttons--login {
             @include mixins.button(
                 $fontsize: 0.8rem,
                 $paddings: 1.1rem 1.7rem 1.1rem 2rem,
@@ -230,7 +255,7 @@
             );
         }
 
-        .btn--signup {
+        .buttons--signup {
             @include mixins.button(
                 $fontsize: 0.8rem,
                 $paddings: 1.1rem 1.9rem 1.1rem 2.2rem,
@@ -292,10 +317,12 @@
             );
             li a {
                 text-decoration: none;
-                color: variables.$secondary-text-color;
+                color: variables.$tertiary-text-color;
                 font-family: variables.$font-primary;
                 transition: color 0.2s;
-                font-size: 0.9rem;
+                font-size: 0.875rem;
+                line-height: 1.05rem;
+                font-weight: 700;
 
                 &:hover {
                     color: variables.$primary-text-color;
@@ -320,7 +347,7 @@
         padding: 0;
         margin: 0;
 
-        .btn--login {
+        .buttons--login {
             @include mixins.button(
                 $fontsize: 0.8rem,
                 $paddings: 1.1rem 2rem 1.1rem 2.2rem,
@@ -329,7 +356,7 @@
             );
         }
 
-        .btn--signup {
+        .buttons--signup {
             @include mixins.button(
                 $fontsize: 0.8rem,
                 $paddings: 1.1rem 2rem 1.1rem 2.2rem,

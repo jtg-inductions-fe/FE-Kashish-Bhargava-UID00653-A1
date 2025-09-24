@@ -1,20 +1,65 @@
-@font-face {
-    font-family: 'Roboto';
-    src:
-        local('Roboto Regular'),
-        local('Roboto-Regular'),
-        url('../../../assets/fonts-roboto/Roboto-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+body {
+    font-family: variables.$font-primary;
 }
-@font-face {
-    font-family: 'Roboto';
-    src:
-        local('Roboto Bold'),
-        local('Roboto-Bold'),
-        url('../../../assets/fonts-roboto/Roboto-Bold.woff2') format('woff2');
+
+h1 {
     font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        font-size: 3.5rem;
+        line-height: 4.2rem;
+    }
+    //Desktop View
+    @include mixins.breakpoints(variables.$db) {
+        font-size: 4.3125rem;
+        line-height: 5.175rem;
+    }
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: variables.$secondary-color;
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        font-size: 1.4375rem;
+        line-height: 1.725rem;
+        letter-spacing: 0.2875rem;
+    }
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: variables.$primary-text-color;
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    //Desktop View
+    @include mixins.breakpoints(variables.$db) {
+        font-size: 2.75rem;
+        line-height: 3.3rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: variables.$tertiary-text-color;
+    line-height: 1.6rem;
+    //Tablet View
+    @include mixins.breakpoints(variables.$tb) {
+        font-size: 1.125rem;
+        line-height: 1.8rem;
+    }
 }
