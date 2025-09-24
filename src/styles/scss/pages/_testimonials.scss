@@ -1,6 +1,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 @use '../vendors/icomoon';
+@use '../base/typography';
 
 .testimonial {
     @include mixins.flex(

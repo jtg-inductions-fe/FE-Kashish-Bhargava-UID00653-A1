@@ -1,5 +1,6 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
+@use '../base/typography';
 
 //Mobile view
 .travelpoint {
@@ -46,7 +47,7 @@
         @include mixins.breakpoints(variables.$tb) {
             margin-top: 2.4rem;
         }
-        //Tablet View
+        //Desktop View
         @include mixins.breakpoints(variables.$db) {
             margin-top: 2.3rem;
             margin-bottom: 0;
