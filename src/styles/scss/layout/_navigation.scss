@@ -12,7 +12,6 @@
 .wrapper {
     position: relative;
     z-index: 1;
-
     &::before {
         content: '';
         position: absolute;
@@ -61,9 +60,8 @@
         $alignment: center,
         $gap: 0
     );
-    padding: 0.8rem 1.3rem 0.8rem 1rem;
-    margin-top: 1.5rem;
-    margin-left: 0rem;
+    margin-top: 38.5px;
+    margin-inline: 1rem;
     background: transparent;
     z-index: 100;
     transition:
@@ -71,14 +69,10 @@
         box-shadow 0.4s ease;
 
     &__logo {
+        position: static;
         order: 1;
         z-index: 4;
     }
-
-    &__hamburger {
-        order: 2;
-    }
-
     &__buttons {
         display: none;
     }
@@ -88,12 +82,13 @@
     }
 
     &__hamburger {
+        order: 2;
         font-size: 2.5rem;
         cursor: pointer;
         border: none;
         background: none;
-        width: auto; //button width=icon size
-        height: auto; //button height=icon size
+        width: 40px;
+        height: 40px;
         padding: 0;
         &:focus-visible {
             outline: 0.1875rem solid variables.$primary-color;
@@ -210,27 +205,31 @@
 // Tablet view
 @media (min-width: variables.$tb) {
     .header {
+        position: relative;
         @include mixins.flex(
             $direction: row,
             $justify: space-between,
             $alignment: center,
             $gap: 0
         );
-        margin: 0;
-        padding: 0;
+        margin-inline: 64px;
+        margin-top: 30px;
     }
     .header__hamburger {
         order: 1;
-        padding: 0.6rem 4.2rem;
-        margin-top: 1.7rem;
+        // padding: 0.6rem 4.2rem;
+        // margin-top: 1.7rem;
         z-index: 4;
     }
     .header__logo {
         order: 2;
-        justify-self: center;
-        padding: 0.7rem 1.5rem 1rem 3.1rem;
-        margin-left: 7.3rem;
-        margin-top: 1.1rem;
+        // justify-self: center;
+        // padding: 0.7rem 1.5rem 1rem 3.1rem;
+        // margin-left: 7.3rem;
+        // margin-top: 1.1rem;
+
+        position: absolute;
+        left: 48%;
     }
     .header__buttons {
         order: 3;
@@ -241,10 +240,11 @@
             $gap: 1rem
         );
         width: auto;
-        max-width: 24.375rem;
-        padding: 1rem 1.5rem;
-        margin-right: 2.6rem;
-        margin-top: 1rem;
+        // max-width: 24.375rem;
+        // padding: 1rem 1.5rem;
+        max-width: auto;
+        // margin-right: 2.6rem;
+        // margin-top: 1rem;
 
         .buttons--login {
             @include mixins.button(
@@ -294,6 +294,8 @@
         order: 1;
         margin: 0;
         padding: 0;
+        padding: static;
+        left: 0;
     }
     .header__nav {
         order: 2;
