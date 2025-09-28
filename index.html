@@ -19,7 +19,11 @@
                     />
                 </a>
                 <!-- Desktop Navbar -->
-                <nav class="header__nav" aria-label="Main menu">
+                <nav
+                    class="header__nav"
+                    aria-label="Main menu"
+                    role="navigation"
+                >
                     <ul class="header__list">
                         <li class="header__link">
                             <a href="#" aria-current="page">Home</a>
@@ -62,6 +66,7 @@
                 id="sidebar"
                 aria-hidden="true"
                 aria-label="Sidebar menu"
+                role="navigation"
             >
                 <button
                     class="sidebar__close"
@@ -211,6 +216,7 @@
                             src="src/assets/images/hero-section/hero-arrow.png"
                             alt=""
                             aria-hidden="true"
+                            loading="lazy"
                         />
                     </div>
                 </section>
@@ -231,6 +237,7 @@
                                     src="src/assets/images/services/services-tour.png"
                                     alt="tour-image"
                                     aria-hidden="true"
+                                    loading="lazy"
                                 />
                             </div>
                             <div class="services__card-content">
@@ -249,6 +256,7 @@
                                     src="src/assets/images/services/services-booking.png"
                                     alt="booking"
                                     aria-hidden="true"
+                                    loading="lazy"
                                 />
                             </div>
                             <div class="services__card-content">
@@ -267,6 +275,7 @@
                                     src="src/assets/images/services/services-weather-forecast.png"
                                     alt="weather-forecast-image"
                                     aria-hidden="true"
+                                    loading="lazy"
                                 />
                             </div>
                             <div class="services__card-content">
@@ -308,6 +317,7 @@
                             <img
                                 src="src/assets/images/travelpoint/travelpoint-image-mobile.png"
                                 alt="Traveller"
+                                loading="lazy"
                             />
                         </picture>
                     </div>
@@ -383,8 +393,9 @@
                                 "
                             />
                             <img
-                                aria-hidden="true"
                                 src="src/assets/images/feature/feature-image-mobile.png"
+                                loading="lazy"
+                                aria-hidden="true"
                             />
                         </picture>
                     </div>
@@ -480,11 +491,17 @@
                                 src="src/assets/images/testimonials/testimonials-tablet-cropped.png"
                                 alt=""
                                 aria-hidden="true"
+                                loading="lazy"
                             />
                         </picture>
                     </div>
                     <!-- Slider main container -->
-                    <div class="swiper" aria-roledescription="carousel">
+                    <div
+                        class="swiper"
+                        role="region"
+                        aria-label="Testimonials carousel"
+                        aria-roledescription="carousel"
+                    >
                         <!-- Additional required wrapper -->
                         <div
                             class="swiper-wrapper"
@@ -499,6 +516,7 @@
                                     <img
                                         src="src/assets/images/testimonials/testimonials-profile-photo.png"
                                         alt="Photo of Sara Parker"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div class="user-stats">
@@ -509,6 +527,7 @@
                                     </h6>
                                     <div
                                         class="user-stars"
+                                        role="img"
                                         aria-label="Rated 5 out of 5"
                                     >
                                         <div class="user-stars__star">
@@ -558,6 +577,7 @@
                                     <img
                                         src="src/assets/images/testimonials/testimonials-profile-photo.png"
                                         alt="Photo of Mark Smith"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div class="user-stats">
@@ -568,6 +588,7 @@
                                     </h6>
                                     <div
                                         class="user-stars"
+                                        role="img"
                                         aria-label="Rated 5 out of 5"
                                     >
                                         <div class="user-stars__star">
@@ -617,6 +638,7 @@
                                     <img
                                         src="src/assets/images/testimonials/testimonials-profile-photo.png"
                                         alt="Photo of Emma Watson"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div class="user-stats">
@@ -627,6 +649,7 @@
                                     </h6>
                                     <div
                                         class="user-stars"
+                                        role="img"
                                         aria-label="Rated 5 out of 5"
                                     >
                                         <div class="user-stars__star">
@@ -692,6 +715,7 @@
                             src="src/assets/images/newsletter/footer-triangle.png"
                             alt=""
                             aria-hidden="true"
+                            loading="lazy"
                         />
                     </div>
                     <div class="newsletter__container">
@@ -794,24 +818,26 @@
                     </div>
                 </div>
                 <div class="footer__sections">
-                    <div class="footer__section" aria-expanded="false">
+                    <div class="footer__section">
                         <div class="footer__title">
                             <span class="footer__headings">Company</span
                             ><button
                                 type="button"
                                 class="footer__toggle"
                                 aria-label="Toggle Company links"
+                                aria-controls="company-links"
+                                aria-expanded="false"
                             >
                                 <i class="icon-circle-down"></i>
                             </button>
                         </div>
-                        <ul class="footer__links">
+                        <ul class="footer__links" id="company-links">
                             <li><a href="#">About</a></li>
                             <li><a href="#">Career</a></li>
                             <li><a href="#">Mobile</a></li>
                         </ul>
                     </div>
-                    <div class="footer__section" aria-expanded="false">
+                    <div class="footer__section">
                         <div class="footer__title">
                             <span class="footer__heading-mobile"
                                 >Contact Us</span
@@ -821,24 +847,27 @@
                                 type="button"
                                 class="footer__toggle"
                                 aria-label="Toggle Contact Us links"
+                                aria-controls="contact-links"
+                                aria-expanded="false"
                             >
                                 <i class="icon-circle-down"></i>
                             </button>
                         </div>
-                        <ul class="footer__links">
+                        <ul class="footer__links" id="contact-links">
                             <li><a href="#">Why Travlog?</a></li>
                             <li><a href="#">Partner with us</a></li>
                             <li><a href="#">FAQ's</a></li>
                             <li><a href="#">Blog</a></li>
                         </ul>
                     </div>
-                    <div class="footer__section" aria-expanded="false">
+                    <div class="footer__section">
                         <div class="footer__title">
                             <span class="footer__headings">Meet Us</span
                             ><button
                                 type="button"
                                 class="footer__toggle"
                                 aria-label="Toggle Meet Us links"
+                                aria-expanded="false"
                             >
                                 <i class="icon-circle-down"></i>
                             </button>
@@ -900,6 +929,7 @@
                         src="src/assets/images/footer/footer-decorative.png"
                         alt=""
                         aria-hidden="true"
+                        loading="lazy"
                     />
                 </div>
             </footer>
