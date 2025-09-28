@@ -2,71 +2,67 @@
 @use '../abstracts/variables';
 @use '../components/buttons';
 @use '../base/typography';
+@use '../pages/hero';
 
 .footer {
     position: relative;
     //Mobile view
-    max-width: 26.875rem;
-    width: 100%;
-    margin: 0 auto;
     margin-top: 5.7rem;
     @include mixins.flex(
         $direction: column,
         $justify: space-between,
         $alignment: center,
-        $gap: 0
+        $gap: 5rem
     );
     //Tablet View
     @include mixins.breakpoints(variables.$tb) {
-        max-width: 64rem;
-        margin-top: 4.1rem;
+        margin-top: 2.7rem;
+        gap: 3rem;
     }
     //Desktop view
     @include mixins.breakpoints(variables.$db) {
-        max-width: 90rem;
         flex-direction: row;
-        margin-top: 6.2rem;
+        margin-top: 14rem;
     }
     &__branding {
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: flex-start,
+            $gap: 2.2rem
+        );
+        margin-inline: 1rem;
+        //Tablet view
+        @include mixins.breakpoints(variables.$tb) {
+            margin-inline: 4rem;
+        }
         //Desktop view
         @include mixins.breakpoints(variables.$db) {
-            margin-top: 3.8rem;
-            margin-left: 4rem;
+            justify-content: flex-start;
+            margin-left: 8rem;
+            margin-right: 0;
+            gap: 3.4rem;
         }
     }
     &__company {
         display: flex;
-        margin-left: 1rem;
         gap: 1rem;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-left: 4rem;
-        }
     }
-    &__cname {
-        margin-top: 0.2rem;
+    &__company-name {
+        margin: 0;
         font-size: 1.5rem;
         line-height: 2.5rem;
         font-weight: 900;
     }
     &__description {
-        margin-left: 1rem;
-        margin-top: 2rem;
+        margin: 0;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             font-size: 1.4375rem;
             line-height: 2.3rem;
-            margin-left: 4rem;
-            margin-right: 4rem;
-        }
-        //Desktop view
-        @include mixins.breakpoints(variables.$db) {
-            margin-right: 0;
         }
     }
     &__socials {
-        margin-top: 2rem;
-        margin-left: 1rem;
         @include mixins.flex(
             $direction: row,
             $justify: flex-start,
@@ -85,29 +81,16 @@
         .icon-footer-instagram {
             font-size: 2.1rem;
         }
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-top: 1.9rem;
-            margin-left: 4rem;
-        }
-        //Desktop view
-        @include mixins.breakpoints(variables.$db) {
-            margin-top: 3.8rem;
-        }
     }
     &__sections {
-        margin-top: 4rem;
         @include mixins.flex(
             $direction: column,
             $justify: flex-start,
             $alignment: stretch,
-            $gap: 0.7rem
+            $gap: 1.8rem
         );
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
-            margin-top: 2.2rem;
-            margin-left: 5rem;
-            margin-right: 5rem;
             @include mixins.flex(
                 $direction: row,
                 $justify: space-between,
@@ -118,7 +101,6 @@
         //Desktop view
         @include mixins.breakpoints(variables.$db) {
             gap: 2rem;
-            margin-top: 4.6rem;
             margin-right: 7.4rem;
         }
     }
@@ -151,16 +133,16 @@
                 $direction: column,
                 $justify: space-around,
                 $alignment: stretch,
-                $gap: 2rem
+                $gap: 2.1rem
             );
-            margin-top: 1.5rem;
             padding-left: 0;
             visibility: visible;
         }
         //Desktop view
         @include mixins.breakpoints(variables.$db) {
             overflow: visible;
-            margin-top: 1.6rem;
+            justify-content: flex-start;
+            gap: 2rem;
             visibility: visible;
         }
     }
@@ -181,25 +163,23 @@
             color: variables.$primary-text-color;
         }
         &:focus-visible {
-            outline: 0.125rem solid variables.$primary-color;
-            outline-offset: 0.125rem;
+            outline: 2px solid variables.$primary-color;
+            outline-offset: 2px;
         }
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             font-size: 1.125rem;
             line-height: 1.9rem;
             font-weight: 400;
-            margin-right: 0;
-            padding-left: 0;
         }
     }
-    #footer__links--tablet {
+    #footer__link-tablet {
         //Desktop view
         @include mixins.breakpoints(variables.$db) {
             display: none;
         }
     }
-    #footer__links--desktop {
+    #footer__link-desktop {
         display: none;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
@@ -219,8 +199,7 @@
         }
     }
     &__title {
-        padding: 0;
-        margin-top: 1.1rem;
+        margin: 0;
         width: 100%;
         @include mixins.flex(
             $direction: row,
@@ -232,13 +211,13 @@
         font-family: variables.$font-primary;
         font-weight: 700;
     }
-    &__headings--mobile {
+    &__heading-mobile {
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             display: none;
         }
     }
-    &__headings--desktop {
+    &__heading-desktop {
         display: none;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
@@ -252,9 +231,9 @@
         cursor: pointer;
         padding: 0;
         &:focus-visible {
-            outline: 0.2rem solid variables.$primary-color;
-            outline-offset: 0.2rem;
-            border-radius: 1rem;
+            outline: 3.2px solid variables.$primary-color;
+            outline-offset: 3.2px;
+            border-radius: 16px;
         }
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
@@ -263,7 +242,6 @@
     }
     .icon-circle-down {
         font-size: 1.4rem;
-        margin-top: -0.4rem;
         transition: transform 0.5s ease;
         @media (prefers-reduced-motion: reduce) {
             transition: none;
@@ -272,19 +250,19 @@
     &__section[aria-expanded='true'] .icon-circle-down {
         transform: rotate(180deg);
     }
-    &__bgpattern {
+    &__background-pattern {
         display: none;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             position: absolute;
             display: block;
             right: 0rem;
-            bottom: 73.51rem;
+            bottom: 81rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
             bottom: 17rem;
-            right: -0.7rem;
+            right: 0rem;
         }
     }
 }

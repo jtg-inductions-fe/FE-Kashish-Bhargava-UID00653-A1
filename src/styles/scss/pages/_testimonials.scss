@@ -2,81 +2,94 @@
 @use '../abstracts/mixins';
 @use '../vendors/icomoon';
 @use '../base/typography';
+@use '../abstracts/functions' as fn;
 
 .testimonial {
     @include mixins.flex(
         $direction: column,
         $justify: space-between,
         $alignment: center,
-        $gap: 0
+        $gap: 4rem
     );
-    margin-top: 3.2rem;
     //Tablet View
     @include mixins.breakpoints(variables.$tb) {
-        margin-top: 6.3rem;
+        gap: 3.2rem;
     }
     //Desktop View
     @include mixins.breakpoints(variables.$db) {
-        margin-top: -33rem;
+        gap: 0rem;
+    }
+    &__content {
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 1.5rem
+        );
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            gap: 0.8rem;
+        }
     }
     &__title {
-        margin-top: 1.4rem;
         text-align: center;
-        margin-left: 0.4rem;
-        margin-bottom: 0;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-top: 1.9rem;
-        }
+        margin: 0;
     }
     &__heading {
         text-align: center;
-        margin-top: 0.9rem;
-        margin-bottom: 0rem;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-top: 1.1rem;
-        }
+        margin: 0;
     }
     &__image {
         display: none;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
+            position: absolute;
             display: block;
             height: 0;
-            margin-top: -27.5rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
+            bottom: 124rem;
             display: block;
             height: 0;
-            margin-top: -23rem;
         }
     }
     .swiper {
-        width: 26.875rem;
-        height: 44.1rem;
+        position: relative;
+        width: fn.rem(398);
+        height: fn.rem(645);
+
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             width: 57.7rem;
-            height: 72.2rem;
-            position: relative;
+            height: fn.rem(535);
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
             width: 79rem;
-            height: 66rem;
+            height: 32rem;
+        }
+        .swiper-wrapper {
+            width: fn.rem(430);
+            height: 28rem;
+            //Tablet View
+            @include mixins.breakpoints(variables.$tb) {
+                height: 29rem;
+            }
+            //Desktop View
+            @include mixins.breakpoints(variables.$db) {
+                height: 26rem;
+            }
         }
         .swiper-slide {
-            height: 31.25rem;
-            margin-top: 4rem;
+            height: 27.5rem;
             @include mixins.flex(
                 $direction: column,
                 $justify: space-between,
                 $alignment: center,
-                $gap: 0
+                $gap: 0.4rem
             );
-            .userprofile {
+            .user-profile {
                 .img {
                     width: 100%;
                     height: auto;
@@ -85,82 +98,72 @@
             }
             //Tablet View
             @include mixins.breakpoints(variables.$tb) {
-                margin-top: 31rem;
+                height: 28rem;
+                gap: 0.8rem;
             }
             //Desktop View
             @include mixins.breakpoints(variables.$db) {
-                margin-top: 26.6rem;
-                margin-left: 0.2rem;
+                height: 25rem;
             }
-            .userinfo {
-                margin-top: 0.2rem;
-                font-size: 1.4rem;
-                &__name {
-                    color: variables.$primary-background-color;
-                    font-size: 1.75rem;
-                }
-                margin-bottom: 0;
-                //Tablet View
-                @include mixins.breakpoints(variables.$tb) {
-                    position: absolute;
-                    top: 11rem;
-                }
-            }
-            .userstars {
-                margin-top: -2rem;
+            .user-stats {
                 @include mixins.flex(
-                    $direction: row,
+                    $direction: column,
                     $justify: space-between,
-                    $alignment: stretch,
-                    $gap: 1.2rem
+                    $alignment: center,
+                    $gap: 1.6rem
                 );
-                .icon-testimonials-star {
-                    font-size: 1.8rem;
+                .user-info {
+                    margin: 0;
+                    font-size: 1.4rem;
+                    &__name {
+                        color: variables.$primary-background-color;
+                        font-size: 1.75rem;
+                    }
                 }
-                //Tablet View
-                @include mixins.breakpoints(variables.$tb) {
-                    position: absolute;
-                    top: 17.5rem;
+                .user-stars {
+                    @include mixins.flex(
+                        $direction: row,
+                        $justify: space-between,
+                        $alignment: stretch,
+                        $gap: 1.2rem
+                    );
+                    .icon-testimonials-star {
+                        font-size: 1.8rem;
+                    }
                 }
             }
-            .userbio {
+            .user-bio {
                 text-align: center;
                 font-size: 1.125rem;
                 line-height: 1.8rem;
-                margin-bottom: 3.7rem;
-                margin-left: 1.3rem;
-                margin-right: 1.3rem;
+                margin: 0;
+                max-width: fn.rem(357);
                 color: variables.$secondary-text-color;
                 //Tablet View
                 @include mixins.breakpoints(variables.$tb) {
                     font-size: 1.4375rem;
                     line-height: 2.3rem;
-                    position: absolute;
-                    top: 21rem;
-                    left: 9.1rem;
-                    right: 9.1rem;
+                    max-width: fn.rem(600);
                 }
                 //Desktop View
                 @include mixins.breakpoints(variables.$db) {
                     font-size: 1.4375rem;
                     line-height: 2.3rem;
-                    top: 21rem;
-                    left: 13.1rem;
-                    right: 13.1rem;
+                    max-width: fn.rem(670);
                 }
             }
         }
         .swiper-pagination-horizontal {
-            margin-bottom: 6.5rem;
+            position: absolute;
+            top: 24.9rem;
             //tablet View
             @include mixins.breakpoints(variables.$tb) {
-                margin-bottom: 7.8rem;
+                top: 31.6rem;
             }
 
             //Desktop View
             @include mixins.breakpoints(variables.$db) {
-                margin-bottom: 8.2rem;
-                margin-left: 0.3rem;
+                top: 27.9rem;
             }
         }
         .swiper-pagination-bullets {
@@ -180,13 +183,14 @@
             }
         }
         .swiper-button-prev {
-            margin-left: 0.8rem;
-            margin-top: 18rem;
+            position: absolute;
+            top: 37.4rem;
+            left: 0rem;
             width: 4.0625rem;
             height: 4.0625rem;
             border-radius: 50%;
             background: variables.$default-background-color;
-            box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             @include mixins.flex(
                 $direction: row,
                 $justify: center,
@@ -197,10 +201,10 @@
                 background 0.2s,
                 box-shadow 0.2s;
             cursor: pointer;
-            border: 0.09375rem solid variables.$carousel-button-border;
+            border: 1.5px solid variables.$carousel-button-border;
             &:hover {
                 background: variables.$dark-default-background-color;
-                box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
             }
             &:focus-visible {
                 outline: 3px solid variables.$secondary-color;
@@ -211,26 +215,26 @@
             }
             //Tablet View
             @include mixins.breakpoints(variables.$tb) {
-                position: absolute;
-                top: 21.7rem;
+                top: 10rem;
                 width: 6.3rem;
                 height: 6.3rem;
-                right: 6rem;
+                left: 1rem;
             }
             //Desktop View
             @include mixins.breakpoints(variables.$db) {
-                top: 16.1rem;
-                left: 2rem;
+                left: 2.6rem;
+                top: 8.5rem;
             }
         }
         .swiper-button-next {
-            margin-right: 0.6rem;
-            margin-top: 18rem;
+            position: absolute;
+            top: 37.4rem;
+            right: 0rem;
             width: 4.0625rem;
             height: 4.0625rem;
             border-radius: 50%;
             background: variables.$primary-color;
-            box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             @include mixins.flex(
                 $direction: row,
                 $justify: center,
@@ -241,10 +245,10 @@
                 background 0.2s,
                 box-shadow 0.2s;
             cursor: pointer;
-            border: 0.09375rem solid variables.$default-background-color;
+            border: 1.5px solid variables.$default-background-color;
             &:hover {
                 background: variables.$dark-primary-color;
-                box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
             }
             &:focus-visible {
                 outline: 3px solid variables.$secondary-color;
@@ -255,16 +259,15 @@
             }
             //Tablet View
             @include mixins.breakpoints(variables.$tb) {
-                position: absolute;
-                top: 21.6rem;
+                top: 10rem;
                 width: 6.4rem;
                 height: 6.4rem;
-                left: 50.5rem;
+                right: 1rem;
             }
             //Desktop View
             @include mixins.breakpoints(variables.$db) {
-                top: 16.1rem;
-                left: 71rem;
+                right: 1.9rem;
+                top: 8.5rem;
             }
         }
         .swiper-button-prev::before {
