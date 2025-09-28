@@ -180,7 +180,7 @@
             gap: 0rem;
         }
         //Desktop View
-        @include mixins.breakpoints(variables.$tb) {
+        @include mixins.breakpoints(variables.$db) {
             justify-content: center;
             gap: 0.3rem;
         }
