@@ -132,7 +132,7 @@
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         @include mixins.button(
             $font-size: 0.9rem,
-            $paddings: 0rem 1rem 0.1rem 1.2rem,
+            $paddings: 0,
             $background-color: transparent,
             $text-color: variables.$secondary-color
         );
@@ -142,41 +142,14 @@
             $alignment: center,
             $gap: 0.8rem
         );
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-top: 0;
-        }
-        //Desktop View
-        @include mixins.breakpoints(variables.$db) {
-            padding-bottom: 2.9rem;
-        }
     }
     .explore-text {
-        margin-top: 0.6rem;
+        margin: 0;
         font-size: 0.875rem;
         line-height: 1.05rem;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            padding-bottom: 0.2rem;
-            margin-top: 0rem;
-        }
-        //Desktop View
-        @include mixins.breakpoints(variables.$db) {
-            padding-top: 2.8rem;
-        }
     }
     .icon-hero-explore {
         font-size: 1.6rem;
-        margin-top: 0.6rem;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-top: 0rem;
-            padding-bottom: 0.2rem;
-        }
-        //Desktop View
-        @include mixins.breakpoints(variables.$db) {
-            padding-top: 2.5rem;
-        }
     }
     &__title {
         margin: 0;
@@ -185,7 +158,6 @@
         .pink {
             color: variables.$secondary-color;
         }
-        margin-bottom: 0;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             max-width: fn.rem(608);
@@ -222,6 +194,7 @@
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             flex-direction: row;
+            gap: 0.8rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
@@ -241,7 +214,7 @@
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             width: 8.9rem;
-            height: 3.1rem;
+            height: 3.3rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
@@ -254,11 +227,11 @@
         height: 4.4rem;
         @include mixins.button(
             $font-size: 0.9rem,
-            $paddings: 2.1rem 0.5rem 2rem 0.5rem,
+            $paddings: 0,
             $background-color: transparent,
             $text-color: variables.$primary-text-color
         );
-        border: 0.03125rem solid variables.$button-border-color;
+        border: 0.5px solid variables.$button-border-color;
         @include mixins.flex(
             $direction: row,
             $justify: center,
@@ -268,9 +241,7 @@
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             width: 11rem;
-            height: 0.6rem;
-            padding-bottom: 1.6rem;
-            padding-top: 1.6rem;
+            height: 3.5rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {

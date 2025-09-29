@@ -117,11 +117,11 @@
         height: 9.4rem;
         @include mixins.flex(
             $direction: column,
-            $justify: space-evenly,
+            $justify: center,
             $alignment: center,
-            $gap: 0
+            $gap: 1.7rem
         );
-        padding-top: 1rem;
+        padding: 36px 100px;
         box-shadow: 1px 1px 7px 2px variables.$cards-shadow-color;
         transition:
             transform 200ms ease,
@@ -139,7 +139,8 @@
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
             width: 12.9rem;
-            padding-top: 0.5rem;
+            padding: 0;
+            gap: 1.2rem;
         }
     }
     &__stats {
