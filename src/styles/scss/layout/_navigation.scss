@@ -2,7 +2,7 @@
 @use '../abstracts/mixins';
 
 body {
-    min-width: 375px;
+    min-width: 400px;
 }
 .preload * {
     transition: none !important;
