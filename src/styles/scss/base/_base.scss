@@ -34,8 +34,8 @@ a {
         text-decoration: underline;
     }
     &:focus-visible {
-        outline: 0.125rem solid variables.$primary-color;
-        outline-offset: 0.125rem;
+        outline: 2px solid variables.$primary-color;
+        outline-offset: 2px;
     }
 }
 

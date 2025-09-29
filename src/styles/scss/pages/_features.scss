@@ -1,6 +1,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 @use '../base/typography';
+@use '../abstracts/functions' as fn;
 
 .features {
     z-index: 1;
@@ -8,94 +9,104 @@
         $direction: column,
         $justify: space-between,
         $alignment: center,
-        $gap: 0
+        $gap: 4.8rem
     );
-    margin-top: 5.6rem;
-    margin-bottom: 0;
     //Tablet View
     @include mixins.breakpoints(variables.$tb) {
-        margin-top: 7.8rem;
+        gap: 4.5rem;
     }
     //Desktop view
     @include mixins.breakpoints(variables.$db) {
-        flex-direction: row-reverse;
-        gap: 4rem;
+        @include mixins.flex(
+            $direction: row-reverse,
+            $justify: flex-start,
+            $alignment: stretch,
+            $gap: 3rem
+        );
+        margin-inline: 6.25rem;
     }
-    &__content {
-        margin-top: 5.3rem;
+    &__main {
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 2.5rem
+        );
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
-            margin-top: 2.5rem;
+            gap: 4rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 4.1rem;
+            width: 34.91125rem;
+            height: 54.3125rem;
+        }
+    }
+    &__content {
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: center,
+            $gap: 1.3rem
+        );
+        //Tablet View
+        @include mixins.breakpoints(variables.$tb) {
+            gap: 1.5rem;
         }
         //Desktop view
         @include mixins.breakpoints(variables.$db) {
-            margin-top: -44.1rem;
-            margin-right: 0;
-            padding-right: 0;
+            gap: 1.1rem;
+            align-items: stretch;
         }
     }
 
     &__image {
-        margin-top: 0.2rem;
+        margin: 1.8rem;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
-            margin-top: 0.4rem;
+            margin: 0;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
-            position: inherit;
-            margin-top: 0.4rem;
-            width: 85rem;
-            height: 90rem;
-            margin-right: 0rem;
+            width: 36.875rem;
+            height: 51.625rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
     &__title {
         text-align: center;
-        margin-top: 1.5rem;
-        margin-bottom: 0;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-top: 2rem;
-        }
+        margin: 0;
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
-            margin-top: 2.9rem;
             text-align: left;
-            margin-left: 9rem;
         }
     }
     &__heading {
-        margin-top: 1rem;
+        margin: 0;
         text-align: center;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-top: 1.1rem;
-            margin-bottom: 0;
-        }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
             text-align: left;
-            margin-left: 9rem;
         }
     }
     &__para {
-        margin-top: 2rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        max-width: fn.rem(310);
+        margin: 0;
         text-align: center;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
-            margin-top: 1.8rem;
-            margin-left: 7.3rem;
-            margin-right: 7.3rem;
+            max-width: fn.rem(795);
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
             text-align: left;
-            margin-left: 8.9rem;
-            margin-right: 2.5rem;
-            padding-right: 2.11rem;
+            max-width: fn.rem(487);
         }
     }
     &__cards {
@@ -105,16 +116,12 @@
             $alignment: center,
             $gap: 0.5rem
         );
-        margin-top: 2rem;
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
-            margin-top: 4.1rem;
             gap: 0rem;
         }
         //Desktop View
         @include mixins.breakpoints(variables.$db) {
-            margin-top: 4.2rem;
-            margin-left: 9rem;
         }
     }
 
@@ -124,10 +131,11 @@
         height: 18.1rem;
         @include mixins.flex(
             $direction: column,
-            $justify: flex-start,
+            $justify: space-between,
             $alignment: stretch,
             $gap: 0
         );
+        padding: fn.rem(32);
         box-shadow: 1px 1px 7px 2px variables.$cards-shadow-color;
         &:hover {
             transform: translateY(-5px) scale(1.05);
@@ -140,6 +148,8 @@
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
             flex-direction: row;
+            justify-content: flex-start;
+            gap: 2rem;
             width: 52rem;
             height: 10.2rem;
         }
@@ -158,48 +168,35 @@
         }
     }
     &__description {
-        margin-left: 2.2rem;
-        margin-top: -0.9rem;
-    }
-    &__icon {
-        margin-top: 2rem;
-        margin-left: 2rem;
+        @include mixins.flex(
+            $direction: column,
+            $justify: space-between,
+            $alignment: stretch,
+            $gap: 0.5rem
+        );
         //Tablet View
         @include mixins.breakpoints(variables.$tb) {
-            margin-top: 1.9rem;
+            justify-content: center;
+            gap: 0rem;
+        }
+        //Desktop View
+        @include mixins.breakpoints(variables.$db) {
+            justify-content: center;
+            gap: 0.3rem;
         }
     }
 
     &__subheading {
-        margin-top: 2.9rem;
         font-size: 1.4rem;
         line-height: 1.7rem;
         font-weight: 700;
-        margin-bottom: 0;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-top: 4rem;
-            margin-left: -0.4rem;
-        }
-        //Desktop View
-        @include mixins.breakpoints(variables.$db) {
-            margin-left: -0.3rem;
-        }
+        margin: 0;
     }
-    &__subpara {
-        margin-top: 0.6rem;
+    &__sub-para {
         font-size: 1.1rem;
         line-height: 1.8rem;
-        margin-right: 3.5rem;
+        margin: 0;
         color: variables.$tertiary-text-color;
         word-spacing: 0.2rem;
-        //Tablet View
-        @include mixins.breakpoints(variables.$tb) {
-            margin-left: -0.4rem;
-        }
-        //Desktop View
-        @include mixins.breakpoints(variables.$db) {
-            margin-left: -0.6rem;
-        }
     }
 }

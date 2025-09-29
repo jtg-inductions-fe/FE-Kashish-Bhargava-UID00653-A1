@@ -9,7 +9,7 @@ initialzeSwipper();
 //sidebar functionality
 const sidebar = document.getElementById('sidebar');
 const hamburger = document.querySelector('.header__hamburger');
-const closeSidebar = document.getElementById('closeSidebar');
+const closeSidebar = document.getElementById('close-sidebar');
 const mainContent = document.getElementById('main-content');
 const header = document.querySelector('.header');
 

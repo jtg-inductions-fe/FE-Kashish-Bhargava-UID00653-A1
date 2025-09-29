@@ -1,20 +1,20 @@
 @use '../abstracts/variables';
 
 //Button Mixin
-@mixin button($fontsize, $paddings, $backgroundcolor, $textcolor) {
+@mixin button($font-size, $paddings, $background-color, $text-color) {
     border: none;
     text-align: center;
     cursor: pointer;
     font-family: variables.$font-primary;
-    border-radius: 62.4375rem;
-    font-size: $fontsize;
+    border-radius: 999px;
+    font-size: $font-size;
     padding: $paddings;
     font-weight: 700;
-    background-color: $backgroundcolor;
-    color: $textcolor;
+    background-color: $background-color;
+    color: $text-color;
     &:focus-visible {
-        outline: 0.1875rem solid variables.$primary-color;
-        outline-offset: 0.125rem;
+        outline: 3px solid variables.$primary-color;
+        outline-offset: 2px;
     }
     &:disabled,
     &[aria-disabled='true'] {
